@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import ch.fhnw.solar.simulator.game.GameView?>
+<?import ch.fhnw.solar.simulator.level.GraphView?>
+<?import ch.fhnw.solar.simulator.level.PopupNotification?>
+<?import ch.fhnw.solar.simulator.level.WeatherAnimationView?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<GameView fx:id="levelView" prefHeight="1080" prefWidth="1920" stylesheets="@../css/style.css"
+          xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="ch.fhnw.solar.simulator.level.LevelController">
+    <AnchorPane>
+        <WeatherAnimationView fx:id="sunContainer" styleClass="sun-container"
+                              AnchorPane.leftAnchor="0.0"
+                              AnchorPane.topAnchor="0.0"/>
+    </AnchorPane>
+    <AnchorPane>
+        <Pane fx:id="rainContainer" styleClass="rain-container" visible="false"/>
+    </AnchorPane>
+    <BorderPane fx:id="bgContainer" styleClass="background-container">
+        <top>
+            <HBox>
+                <VBox styleClass="title, title-left, radius-right">
+                    <Label fx:id="levelTitle"/>
+                </VBox>
+                <Region maxHeight="-Infinity" maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
+                <HBox styleClass="title, title-right, radius-left">
+                    <Label fx:id="scoreLabel"/>
+                    <Label fx:id="highScore"/>
+                </HBox>
+            </HBox>
+        </top>
+        <right>
+            <VBox alignment="CENTER_RIGHT">
+                <Region maxHeight="100" maxWidth="-Infinity" VBox.vgrow="ALWAYS"/>
+                <VBox alignment="CENTER_RIGHT" spacing="50">
+                    <Button fx:id="levelButton" onAction="#openLevelView">
+                        <styleClass>
+                            <String fx:value="btn-primary"/>
+                            <String fx:value="btn-blue"/>
+                            <String fx:value="radius-left"/>
+                        </styleClass>
+                    </Button>
+                    <Button fx:id="helpButton" onAction="#openInfoView">
+                        <styleClass>
+                            <String fx:value="btn-primary"/>
+                            <String fx:value="btn-red"/>
+                            <String fx:value="radius-left"/>
+                        </styleClass>
+                    </Button>
+                    <Button fx:id="pausePlayButton" onAction="#pausePlayGraph">
+                        <styleClass>
+                            <String fx:value="btn-primary"/>
+                            <String fx:value="btn-orange"/>
+                            <String fx:value="radius-left"/>
+                        </styleClass>
+                    </Button>
+                    <Button fx:id="restartButton" onAction="#restartGame">
+                        <styleClass>
+                            <String fx:value="btn-primary"/>
+                            <String fx:value="btn-green"/>
+                            <String fx:value="radius-left"/>
+                        </styleClass>
+                    </Button>
+                    <PopupNotification fx:id="popup">
+                        <styleClass>
+                            <String fx:value="popup"/>
+                        </styleClass>
+                    </PopupNotification>
+                </VBox>
+                <Region maxHeight="Infinity" maxWidth="-Infinity" VBox.vgrow="ALWAYS"/>
+                <Region maxHeight="Infinity" maxWidth="-Infinity" VBox.vgrow="ALWAYS"/>
+            </VBox>
+        </right>
+
+        <bottom>
+            <HBox alignment="CENTER_LEFT">
+                <Region maxHeight="-Infinity" maxWidth="120" HBox.hgrow="ALWAYS"/>
+                <HBox fx:id="devices" styleClass="device-btn-container"/>
+            </HBox>
+        </bottom>
+
+        <center>
+            <StackPane styleClass="hause-graph-container">
+                <Pane fx:id="hausContainer" styleClass="haus-container"/>
+                <GraphView fx:id="graphContainer" styleClass="graph-container"/>
+            </StackPane>
+        </center>
+    </BorderPane>
+</GameView>

@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- POM file for the Movie Rental System project -->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+      http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <!-- Specifies the version of the POM model -->
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Group ID for the project -->
+    <groupId>ch.fhnw.solar</groupId>
+
+    <!-- Artifact ID for the project -->
+    <artifactId>simulator</artifactId>
+
+    <!-- Version number for the project, reflects year and starting month of semester -->
+    <version>22.2-SNAPSHOT</version>
+
+    <!-- Descriptive name for the project -->
+    <name>Solar Simulator</name>
+
+    <!-- URL of the project's homepage -->
+    <url>https://www.fhnw.ch/solarsimulator</url>
+
+    <!-- Project description -->
+    <description>
+        Der Solarstromsimulator ist ein interaktives Lernspiel, das den Einsatz verschiedener privater Elektrogeräte
+        simuliert und deren Verbrauch auf die Stromproduktion einer privaten Fotovoltaikanlage optimiert. Dabei
+        berücksichtigt das Spiel realistische Stromkonsumbedürfnisse eines Privathaushalts. Es bietet den Nutzerinnen
+        und Nutzern die Möglichkeit, ihr Wissen über Energiewende, Fotovoltaikanlagen und den Einfluss von
+        Elektrogeräten auf Energieverbrauch und -produktion spielerisch zu erweitern.
+    </description>
+
+    <!-- Licenses for the project -->
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <!-- Developer information -->
+    <!-- This section includes information about the developers working on the project.
+   It lists their IDs, names, and email addresses, and specifies if they are currently active
+   in the project. It is important to keep this section up to date as the project evolves and
+   new developers join or leave the team. -->
+    <developers>
+        <developer>
+            <id>Cruz</id>
+            <name>William Cruz</name>
+            <email>william.cruz@students.fhnw.ch</email>
+            <properties>
+                <active>true</active>
+            </properties>
+        </developer>
+        <developer>
+            <id>Gjidoda</id>
+            <name>Leonida Gjidoda</name>
+            <email>leonida.gjidoda@students.fhnw.ch</email>
+            <properties>
+                <active>true</active>
+            </properties>
+        </developer>
+        <developer>
+            <id>Studer</id>
+            <name>Fabian Studer</name>
+            <email>fabian.studer@students.fhnw.ch</email>
+            <properties>
+                <active>true</active>
+            </properties>
+        </developer>
+        <developer>
+            <id>Paramarajah</id>
+            <name>Kanusjan Paramarajah</name>
+            <email>kanusjan.paramarajah@students.fhnw.ch</email>
+            <properties>
+                <active>true</active>
+            </properties>
+        </developer>
+        <developer>
+            <id>Koch</id>
+            <name>Nick Koch</name>
+            <email>nick.koch@students.fhnw.ch</email>
+            <properties>
+                <active>true</active>
+            </properties>
+        </developer>
+    </developers>
+
+
+    <!-- Properties for the project -->
+    <properties>
+        <!-- General project properties -->
+        <maven.compiler.release>17</maven.compiler.release>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <!-- Application specific properties -->
+        <app.main.class>ch.fhnw.solar.simulator.Solarsimulator</app.main.class>
+
+        <!-- Plugin versions -->
+        <maven-compiler.version>3.11.0</maven-compiler.version>
+        <maven-surefire.version>3.1.0</maven-surefire.version>
+        <maven-checkstyle.version>3.2.1</maven-checkstyle.version>
+        <maven-shade.version>3.4.1</maven-shade.version>
+        <exec-maven.version>3.1.0</exec-maven.version>
+        <maven-project-info-reports.version>3.4.2</maven-project-info-reports.version>
+        <maven-jxr.version>3.3.0</maven-jxr.version>
+        <maven-javadoc.version>3.5.0</maven-javadoc.version>
+        <maven-site.version>4.0.0-M5</maven-site.version>
+        <javafx-maven>0.0.8</javafx-maven>
+        <maven-resources.version>3.3.1</maven-resources.version>
+        <maven-surefire-report.version>3.1.0</maven-surefire-report.version>
+
+        <!-- Dependency versions -->
+        <checkstyle.dependency.version>10.3.4</checkstyle.dependency.version>
+        <commons-csv.version>1.10.0</commons-csv.version>
+        <junit-jupiter.version>5.9.2</junit-jupiter.version>
+        <mockito.version>5.2.0</mockito.version>
+        <byte-buddy.version>1.14.4</byte-buddy.version>
+        <javafx-dependency.version>21-ea+17</javafx-dependency.version>
+    </properties>
+
+    <build>
+        <!-- Resources -->
+        <resources>
+            <!-- Main resources directory -->
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+        </resources>
+
+        <!-- Test directory -->
+        <testSourceDirectory>src/test</testSourceDirectory>
+        <!-- Plugins -->
+        <plugins>
+            <!-- Compiler plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler.version}</version>
+                <configuration>
+                    <compilerArgs>
+                        <!-- Prevents recompilation due to missing package-info.class, see MCOMPILER-205 -->
+                        <arg>-Xpkginfo:always</arg>
+                    </compilerArgs>
+                </configuration>
+            </plugin>
+
+            <!-- Surefire plugin -->
+            <!-- The plugin for running tests -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${maven-surefire.version}</version>
+            </plugin>
+
+            <!-- Exec plugin -->
+            <!-- To run the Java program using Maven, enter the following command in the terminal: mvn exec:java -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>${exec-maven.version}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <mainClass>${app.main.class}</mainClass>
+                </configuration>
+            </plugin>
+
+            <!-- Checkstyle plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <version>${maven-checkstyle.version}</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>com.puppycrawl.tools</groupId>
+                        <artifactId>checkstyle</artifactId>
+                        <version>${checkstyle.dependency.version}</version>
+                    </dependency>
+                </dependencies>
+                <configuration>
+                    <!-- Location of the checkstyle configuration file -->
+                    <configLocation>src/main/config/swc_checks.xml</configLocation>
+                    <!-- Include test source directory -->
+                    <includeTestSourceDirectory>true</includeTestSourceDirectory>
+                    <!-- Set violation severity -->
+                    <violationSeverity>error</violationSeverity>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>test</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- Shade plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>${maven-shade.version}</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                            <!-- Define transformer for the manifest file -->
+                            <transformers>
+                                <transformer
+                                        implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                    <mainClass>${app.main.class}</mainClass>
+                                </transformer>
+                            </transformers>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+
+            <!-- The plugin for generating the project site, including reports and documentation -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>${maven-site.version}</version>
+                <configuration>
+                    <!-- Configure the output directory for the generated site -->
+                    <outputDirectory>${basedir}/target/site</outputDirectory>
+                </configuration>
+            </plugin>
+
+            <!-- Configure the javafx-maven-plugin to run the Solarsimulator application -->
+            <plugin>
+                <!-- Use the javafx-maven-plugin for JavaFX-related tasks -->
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-maven-plugin</artifactId>
+                <version>${javafx-maven}</version>
+
+                <!-- Configure the main class to be used when running the application -->
+                <configuration>
+                    <mainClass>${app.main.class}</mainClass>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <!-- The maven-resources-plugin is used for resource management -->
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>${maven-resources.version}</version>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <!-- Testing dependencies -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>${junit-jupiter.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-inline</artifactId>
+            <version>${mockito.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>net.bytebuddy</groupId>
+            <artifactId>byte-buddy</artifactId>
+            <version>${byte-buddy.version}</version>
+        </dependency>
+
+        <!-- External library dependencies -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-csv</artifactId>
+            <version>${commons-csv.version}</version>
+        </dependency>
+
+        <!-- Add JavaFX dependencies for building the graphical user interface -->
+        <!-- The following dependencies are needed for various JavaFX components -->
+        <!-- Order matters: controls, fxml, base, graphics, swing -->
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>${javafx-dependency.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-fxml</artifactId>
+            <version>${javafx-dependency.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-base</artifactId>
+            <version>${javafx-dependency.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-graphics</artifactId>
+            <version>${javafx-dependency.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-swing</artifactId>
+            <version>${javafx-dependency.version}</version>
+        </dependency>
+    </dependencies>
+
+    <!-- Maven reporting section for generating project reports -->
+    <reporting>
+        <!-- Javadoc plugin configuration -->
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>${maven-javadoc.version}</version>
+                <configuration>
+                    <!-- The title for the Javadoc page -->
+                    <doctitle>Solar Simulator</doctitle>
+                    <!-- The footer for the Javadoc page -->
+                    <bottom>Copyright © 2023 BSc Computer Science - FHNW</bottom>
+                    <!-- Generate Javadoc comments down to the visibility protected -->
+                    <show>protected</show>
+                    <!-- Only generate Javadoc for production code and exclude test packages -->
+                    <excludePackageNames>ch.fhnw.solar.simulator.view:*.test.*</excludePackageNames>
+
+                    <!-- Add JavaFX dependencies to the additionalDependencies section -->
+                    <!-- The following dependencies are needed for building the graphical user interface -->
+                    <!-- Order matters: controls, graphics, fxml -->
+                    <additionalDependencies>
+                        <!-- The controls dependency provides various UI controls -->
+                        <additionalDependency>
+                            <groupId>org.openjfx</groupId>
+                            <artifactId>javafx-controls</artifactId>
+                            <version>${javafx-dependency.version}</version>
+                        </additionalDependency>
+                        <!-- The graphics dependency provides the JavaFX graphics API -->
+                        <additionalDependency>
+                            <groupId>org.openjfx</groupId>
+                            <artifactId>javafx-graphics</artifactId>
+                            <version>${javafx-dependency.version}</version>
+                        </additionalDependency>
+                        <!-- The fxml dependency provides support for building UIs with FXML -->
+                        <additionalDependency>
+                            <groupId>org.openjfx</groupId>
+                            <artifactId>javafx-fxml</artifactId>
+                            <version>${javafx-dependency.version}</version>
+                        </additionalDependency>
+                    </additionalDependencies>
+                </configuration>
+                <reportSets>
+                    <reportSet>
+                        <reports>
+                            <report>javadoc</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
+            </plugin>
+            <!-- Checkstyle plugin configuration -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <version>${maven-checkstyle.version}</version>
+                <configuration>
+                    <!-- The location of the checkstyle configuration file -->
+                    <configLocation>src/main/config/swc_checks.xml</configLocation>
+                    <includeTestSourceDirectory>true</includeTestSourceDirectory>
+                    <!-- The severity of violations -->
+                    <violationSeverity>warning</violationSeverity>
+                </configuration>
+            </plugin>
+
+            <!-- JXR plugin configuration -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jxr-plugin</artifactId>
+                <version>${maven-jxr.version}</version>
+            </plugin>
+
+            <!-- Maven project info reports plugin configuration -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+                <version>${maven-project-info-reports.version}</version>
+            </plugin>
+            <!--
+            Dieses ist das Maven Surefire Report Plugin. Es erstellt Testberichte basierend auf den XML-Dateien vom Maven Surefire Plugin.
+            Wir verwenden hier die Version, die in '${maven-surefire-report.version}' definiert ist.
+            Ein 'reportSet' namens 'report-only' wird definiert, der nur Testergebnisberichte ohne Einzelheiten erzeugt.
+            -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-report-plugin</artifactId>
+                <version>${maven-surefire-report.version}</version>
+                <reportSets>
+                    <reportSet>
+                        <reports>
+                            <report>report-only</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
+            </plugin>
+        </plugins>
+    </reporting>
+
+</project>

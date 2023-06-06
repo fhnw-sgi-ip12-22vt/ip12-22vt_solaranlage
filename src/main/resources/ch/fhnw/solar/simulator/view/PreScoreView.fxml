@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import ch.fhnw.solar.simulator.game.GameView?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<GameView fx:id="preScoreView" prefHeight="1080" prefWidth="1920" stylesheets="@../css/style.css"
+          xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="ch.fhnw.solar.simulator.preScore.PreScoreController">
+    <BorderPane>
+        <top>
+            <HBox>
+                <VBox styleClass="title, title-left, radius-right">
+                    <Label fx:id="preScoreTitleLabel"/>
+                </VBox>
+                <Region maxHeight="-Infinity" maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
+                <HBox styleClass="title, title-right, radius-left">
+                    <Label fx:id="scoreLabel"/>
+                    <Label fx:id="pointsLabelTop"/>
+                </HBox>
+            </HBox>
+        </top>
+        <right>
+            <VBox alignment="TOP_RIGHT">
+                <Region maxHeight="100" maxWidth="-Infinity" VBox.vgrow="ALWAYS"/>
+                <VBox spacing="50">
+                    <Button fx:id="confirmButton" onAction="#openScoreView">
+                        <styleClass>
+                            <String fx:value="btn-primary"/>
+                            <String fx:value="btn-blue"/>
+                            <String fx:value="radius-left"/>
+                        </styleClass>
+                    </Button>
+                    <Button fx:id="randomNameButton" onAction="#setRandomName">
+                        <styleClass>
+                            <String fx:value="btn-primary"/>
+                            <String fx:value="btn-red"/>
+                            <String fx:value="radius-left"/>
+                        </styleClass>
+                    </Button>
+                </VBox>
+            </VBox>
+        </right>
+        <center>
+            <VBox alignment="CENTER">
+                <VBox styleClass="center-style, score-table">
+                    <HBox>
+                        <Label fx:id="pointsLabel"/>
+                        <Label fx:id="scoreValueAtEnd" styleClass="plus-points"/>
+                    </HBox>
+                    <HBox>
+                        <Label fx:id="missingGoalsLabel"/>
+                        <Label fx:id="pointsLost" styleClass="minus-points"/>
+                    </HBox>
+                    <HBox styleClass="points-container-style">
+                        <Label fx:id="endPointsLabel"/>
+                        <Label fx:id="scoreValue" styleClass="plus-points, points-style"/>
+                    </HBox>
+                    <HBox>
+                        <Label fx:id="levelLabel"/>
+                        <Label fx:id="selectedLevelLabel"/>
+                    </HBox>
+                    <HBox styleClass="random-name">
+                        <Label fx:id="randomNameLabel"/>
+                        <Label fx:id="nameLabel" styleClass="name-style"/>
+                    </HBox>
+                </VBox>
+            </VBox>
+        </center>
+
+    </BorderPane>
+</GameView>

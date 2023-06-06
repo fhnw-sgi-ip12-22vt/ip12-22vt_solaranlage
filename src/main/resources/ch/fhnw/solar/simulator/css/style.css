@@ -1,0 +1,485 @@
+/**
+ * Stellt den Basisstil für die Anwendung bereit. Definiert die Schriftart und -größe.
+ */
+.root {
+    -fx-font-family: Arial;
+    -fx-font-size: 20;
+}
+
+/**
+ * Stellt den Hintergrund der Anwendung bereit.
+ */
+.background-container {
+    -fx-background-image: url(../img/background-L1.png);
+    -fx-background-size: cover;
+}
+/* Die folgende Eigenschaft ändert die Hintergrundfarbe eines Elements */
+.background-select-level{
+    /* Diese Farbe ist ein dunkler, satter Blauton */
+    -fx-background-color: #454EA2;
+}
+/**
+ * Definiert das Aussehen der Sonne im Spiel.
+ */
+.sun-container {
+    -fx-background-color: rgba(244, 221, 160, 1);
+    -fx-background-radius: 50%;
+    -fx-min-width: 120px;
+    -fx-min-height: 120px;
+    -fx-max-width: 120px;
+    -fx-max-height: 120px;
+}
+
+/**
+ * Stellt den Container für den Regeneffekt bereit.
+ */
+.rain-container {
+    -fx-background-image: url(../img/rain.png);
+    -fx-background-repeat: repeat;
+    -fx-pref-width: 1920;
+    -fx-pref-height: 1080;
+}
+
+/**
+ * btn-primary: Diese Regel legt eine bevorzugte Breite von 200 Pixeln fest, zentriert den Inhalt links und
+ * definiert einen Abstand von 10 Pixeln an allen Seiten, aber 20 Pixeln auf der rechten Seite.
+ * Der Text wird weiß dargestellt.
+ */
+.btn-primary {
+    -fx-pref-width: 200;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 10 10 10 20;
+    -fx-text-fill: white;
+}
+
+/**
+ * btn-blue, btn-red, btn-orange, btn-green: Diese Regeln legen die Hintergrundfarben
+ * der Schaltflächen auf die jeweiligen Farben fest.
+*/
+.btn-blue {
+    -fx-background-color: blue;
+}
+
+.btn-red {
+    -fx-background-color: red;
+}
+
+.btn-orange {
+    -fx-background-color: orange;
+}
+
+.btn-green {
+    -fx-background-color: green;
+}
+
+/**
+ * btn-active: Diese Regel legt die Rahmenfarbe auf weiß, die Rahmenbreite auf 4 Pixel
+ * und den Rahmenstil auf gestrichelt für aktive Schaltflächen fest.
+ */
+.btn-active {
+    -fx-border-color: white;
+    -fx-border-width: 4;
+    -fx-border-style: dashed;
+}
+
+/**
+ * btn-levels: Diese Regel legt eine bevorzugte Höhe und Breite von 250 Pixeln fest,
+ * setzt den Schriftschnitt auf fett und den Hintergrund auf transparent.
+ */
+.btn-levels {
+    -fx-pref-height: 250;
+    -fx-pref-width: 250;
+    -fx-font-weight: bold;
+    -fx-background-color: transparent;
+}
+
+/**
+ * btn-summer, btn-winter, btn-raining: Diese Regeln legen spezifische Hintergrundbilder fest,
+ * passen die Größe des Hintergrundbildes an, um den gesamten Bereich der Schaltfläche abzudecken,
+ * und setzen die Textfarbe auf weiß.
+ */
+.btn-summer {
+    -fx-background-image: url(../img/level1.png);
+    -fx-background-size: cover;
+    -fx-text-fill: white;
+}
+
+.btn-winter {
+    -fx-background-image: url(../img/level2.png);
+    -fx-background-size: cover;
+    -fx-text-fill: white;
+}
+
+.btn-raining {
+    -fx-background-image: url(../img/level3.png);
+    -fx-background-size: cover;
+    -fx-text-fill: white;
+}
+
+/**
+ * TilePane-Container: Dieser Stil zentriert die Elemente im Container und definiert
+ * einen horizontalen Abstand (hgap) von 10 Pixeln zwischen ihnen.
+ */
+.tilePane-container {
+    -fx-alignment: center;
+    -fx-hgap: 10;
+}
+
+/**
+ * Titel: Hier wird die Hintergrundfarbe des Titel-Elements definiert,
+ * eine semi-transparente graue Farbe (mit einer Deckkraft von 90%)
+ */
+.title {
+    -fx-background-color: rgba(217, 217, 217, 0.9);
+}
+
+/**
+ * Titel-Links: Dieser Stil zentriert die Elemente links im Container und definiert
+ * einen Abstand von 10 Pixeln oben und unten und 20 Pixeln auf der rechten Seite.
+ */
+.title-left {
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 10 20 10 10;
+    -fx-spacing: 20;
+}
+
+/**
+ * Titel-Rechts: Dieser Stil definiert einen Abstand von
+ * 10 Pixeln oben und unten und 20 Pixeln auf der linken Seite.
+ */
+.title-right {
+    -fx-padding: 10 10 10 20;
+    -fx-spacing: 20;
+}
+
+/**
+ * Rechter Radius: Der Hintergrund-Radius ist auf der rechten Seite gerundet
+ * (20px oben und unten) und auf der linken Seite eckig.
+ */
+.radius-right {
+    -fx-background-radius: 0 20 20 0;
+}
+
+/**
+ * Linker Radius: Der Hintergrund-Radius ist auf der linken Seite gerundet
+ * (20px oben und unten) und auf der rechten Seite eckig.
+ */
+.radius-left {
+    -fx-background-radius: 20 0 0 20;
+}
+
+/**
+ * Container für Informationstext. Hintergrund ist weiß und die Ecken sind abgerundet. Hat eine maximale Breite von
+ * 1200px und eine bevorzugte Höhe von 900px. Das Padding und der Abstand zwischen den Elementen beträgt jeweils 20px.
+ */
+.info-text-container {
+    -fx-background-color: white;
+    -fx-background-radius: 20;
+    -fx-max-width: 1200;
+    -fx-pref-height: 900;
+    -fx-padding: 20;
+    -fx-spacing: 20;
+}
+
+/* In diesem Container bricht der Text in Labels um, wenn die maximale Breite von 1100px erreicht ist. */
+.info-text-container .label {
+    -fx-wrap-text: true;
+    -fx-max-width: 1100;
+}
+
+/**
+ * Dieser Container hat abgerundete Ecken auf der linken Seite und eine bevorzugte Höhe von 600px.
+ * Das Padding beträgt 20px.
+ */
+.scroll-container {
+    -fx-background-radius: 20 0 0 20;
+    -fx-pref-height: 600;
+    -fx-padding: 20;
+}
+
+/**
+ * Dieser Container hat die Ausrichtung TOP_CENTER und ein Padding von 10px.
+ * Die maximale Breite beträgt 900px und die Abstände zwischen den Elementen betragen jeweils 10px.
+ */
+.info-cards-container {
+    -fx-alignment: TOP_CENTER;
+    -fx-padding: 10;
+    -fx-max-width: 900;
+    -fx-hgap: 10;
+    -fx-vgap: 10;
+}
+
+/**
+ * Stil für Karten. Sie haben ein Padding von 10px, eine gestrichelte schwarze Umrandung und abgerundete Ecken.
+ * Die Grenzgröße beträgt 4 und die maximale Breite beträgt 400px. Der Abstand zwischen den Elementen beträgt 5px.
+ */
+.card-style {
+    -fx-padding: 10;
+    -fx-border-color: black;
+    -fx-border-style: dashed;
+    -fx-border-radius: 20;
+    border-size: 4;
+    -fx-max-width: 400;
+    -fx-spacing: 5;
+}
+
+/* Elemente mit diesem Stil haben eine maximale Größe von 800px in Breite und Höhe. */
+.center-style {
+    -fx-max-width: 800;
+    -fx-max-height: 800;
+}
+
+/* Punkttabelle mit weißem Hintergrund und abgerundeten Ecken. Der Abstand zwischen den Elementen beträgt 5px. */
+.score-table {
+    -fx-spacing: 5;
+    -fx-background-color: white;
+    -fx-background-radius: 20;
+}
+
+/* Labels in der Punkttabelle haben ein Padding von 10px. */
+.score-table Label {
+    -fx-padding: 10;
+}
+
+/* HBoxen in der Punkttabelle haben einen Abstand von 5px zwischen den Elementen. */
+.score-table HBox {
+    -fx-spacing: 5;
+}
+
+/* Negative Punkte werden in roter Farbe angezeigt. */
+.minus-points {
+    -fx-text-fill: red;
+}
+
+/* Positive Punkte werden in grüner Farbe angezeigt. */
+.plus-points {
+    -fx-text-fill: green;
+}
+
+/**
+ * Der Name ist grün hinterlegt und hat abgerundete Ecken am unteren Rand.
+ * Das Padding beträgt 10px auf der oberen und unteren Seite.
+ */
+.random-name {
+    -fx-background-color: green;
+    -fx-background-radius: 0 0 20 20;
+    -fx-padding: 10 0;
+}
+
+/* Das Label für den Namen hat eine weiße Textfarbe. */
+.random-name Label {
+    -fx-text-fill: white;
+}
+
+/* Stil für den Namen. Der Text ist fett und schwarz. */
+.name-style {
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+}
+
+/* Der Punkte-Container hat einen grünen Hintergrund und ein Padding von 10px an der Ober- und Unterseite. */
+.points-container-style {
+    -fx-background-color: green;
+    -fx-padding: 10 0;
+}
+
+/* Das Label im Punkte-Container hat eine weiße Textfarbe. */
+.points-container-style Label {
+    -fx-text-fill: white;
+}
+
+/* Punktestil. Der Text ist fett und schwarz. */
+.points-style {
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+}
+
+/**
+ * Container für die Punkttabelle. Der Hintergrund ist weiß und die Ecken sind abgerundet. Hat ein Padding von 20
+ * Pixeln und eine maximale Größe von 900px Breite und Höhe.
+ */
+.score-table-container {
+    -fx-background-radius: 20;
+    -fx-background-color: white;
+    -fx-padding: 20;
+    -fx-max-width: 900;
+    -fx-max-height: 900;
+}
+
+/* Die Höhe der Tabelle in der Punkttabelle wird auf 800px festgelegt. */
+.score-table-container .table-view {
+    -fx-pref-height: 800;
+}
+
+/* Der aktuelle Benutzer hat eine Hintergrundfarbe von #C84164. */
+.current-user {
+    -fx-background-color: #C84164;
+}
+
+/**
+ * Container für das Haus und das Diagramm. Unten zentriert ausgerichtet und ein Padding von 20 Pixel unten.
+ */
+.hause-graph-container {
+    -fx-alignment: BOTTOM_CENTER;
+    -fx-padding: 0 0 20 0;
+}
+
+/**
+ * Container für das Haus. Das Bild "haus-L1.png" wird als Hintergrund verwendet. Die maximale Größe ist auf 1300px
+ * Breite und 800px Höhe beschränkt.
+ */
+.haus-container {
+    -fx-background-image: url("../img/haus-L1.png");
+    -fx-background-size: 1300px 800px;
+    -fx-background-repeat: no-repeat;
+    -fx-max-width: 1300;
+    -fx-max-height: 800;
+}
+
+/**
+ * Container für das Diagramm. Die Legende wird ausgeblendet. Die maximale Größe ist auf 1050px Breite und 600px
+ * Höhe beschränkt.
+ */
+.graph-container {
+    -fx-legend-visible: false;
+    -fx-max-width: 1050;
+    -fx-max-height: 600;
+}
+
+/* Styling für die Achsenbeschriftung des Diagramms. Die Beschriftung wird rot und hat ein Padding von 20 Pixeln. */
+.graph-container .axis-label {
+    -fx-text-fill: red;
+    -fx-padding: 20;
+}
+
+
+/* Fortschrittsbalken für die Geräteziele. Die Akzentfarbe ist Grün und der innere Hintergrund ist Dunkelblau. */
+.device-goals-element .progress-bar {
+    -fx-accent: #00702f;
+    -fx-control-inner-background: #34495e;
+    -fx-min-width: 150px;
+    -fx-max-height: 10px;
+}
+
+/* Der Balken des Fortschrittsbalkens hat abgerundete Ecken. */
+.device-goals-element .progress-bar .bar {
+    -fx-background-radius: 5px;
+}
+
+/* Die Spur des Fortschrittsbalkens ist transparent mit abgerundeten Ecken und hat eine dunkelblaue Umrandung. */
+.device-goals-element .progress-bar .track {
+    -fx-background-color: transparent;
+    -fx-background-radius: 5px;
+    -fx-border-color: #2c3e50;
+    -fx-border-radius: 5px;
+}
+
+/**
+ * Definiert die Gestaltung des Containers für Gerätebuttons.
+ */
+.device-btn-container {
+    -fx-padding: 0 0 15 0;
+}
+
+/**
+ * Definiert den Abstand zwischen den Elementen im GridPane des Gerätebutton-Containers.
+ */
+.device-btn-container GridPane {
+    -fx-hgap: 15;
+    -fx-vgap: 10;
+}
+
+/**
+ * Definiert das grundlegende Aussehen aller Gerätebuttons.
+ */
+.device-btn-container Button {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-pref-height: 50;
+    -fx-min-width: 190;
+    -fx-background-radius: 20 20 20 20;
+    -fx-border-color: #57B757;
+    -fx-border-width: 3;
+    -fx-border-radius: 20 20 20 20;
+}
+
+/**
+ * Definiert das Aussehen der Gerätebuttons, wenn sie gedrückt werden.
+ */
+.device-btn-container Button:pressed {
+
+}
+
+/**
+ * Definiert das Aussehen der aktiven Gerätebuttons.
+ */
+.device-btn-container .btn-active {
+    -fx-border-color: white;
+    -fx-border-style: dashed;
+    -fx-border-width: 3;
+    -fx-border-radius: 20 20 20 20;
+}
+
+/* Definiert das Aussehen der einzelnen Gerätebuttons. Jede ID repräsentiert ein bestimmtes Gerät. */
+#device-button-1 {
+    -fx-background-color: #FBA71B; /* Soundlage */
+}
+
+#device-button-2 {
+    -fx-background-color: #8977F6; /* Herd */
+}
+
+#device-button-3 {
+    -fx-background-color: #57B757; /* Geschirrspueler */
+}
+
+#device-button-4 {
+    -fx-background-color: #A858D2; /* Kuehlschrank */
+}
+
+#device-button-5 {
+    -fx-background-color: #41A9C9; /* Waschmaschine */
+}
+
+#device-button-6 {
+    -fx-background-color: #FBA71B; /* Tumbler */
+}
+
+#device-button-7 {
+    -fx-background-color: #AED69C; /* Radiator */
+}
+
+#device-button-8 {
+    -fx-background-color: #E382CE; /* PC */
+}
+
+#device-button-9 {
+    -fx-background-color: #888888; /* Gitarre */
+}
+
+#device-button-10 {
+    -fx-background-color: #AED69C; /* Ventilator */
+}
+
+#device-button-11 {
+    -fx-background-color: #F39F13; /* Gaming PC */
+}
+
+#device-button-12 {
+    -fx-background-color: #FBA71B; /* Fernseher */
+}
+
+/**
+ * Definiert die Gestaltung der Popup-Fenster.
+ */
+.popup {
+    -fx-background-color: yellow;
+    -fx-background-radius: 12px 0 0 12px;
+    -fx-font-size: 18px;
+    -fx-alignment: center;
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+    -fx-border-radius: 8px 0 0 8px;
+    -fx-border-style: solid none solid solid;
+}
+

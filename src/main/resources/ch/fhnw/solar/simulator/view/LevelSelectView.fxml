@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import ch.fhnw.solar.simulator.game.GameView?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<GameView fx:id="levelSelectView" prefHeight="1080" prefWidth="1920" stylesheets="@../css/style.css"
+          xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="ch.fhnw.solar.simulator.levelSelect.LevelSelectController">
+    <BorderPane styleClass="background-select-level">
+        <top>
+            <HBox>
+                <VBox styleClass="title, title-left, radius-right">
+                    <Label fx:id="levelSelectTitleLabel"/>
+                </VBox>
+                <Region maxHeight="-Infinity" maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
+            </HBox>
+        </top>
+        <right>
+            <VBox alignment="TOP_RIGHT">
+                <Region maxHeight="100" maxWidth="-Infinity" VBox.vgrow="ALWAYS"/>
+                <VBox alignment="CENTER_RIGHT" spacing="50">
+                    <Button fx:id="rightButton" onAction="#selectNext">
+                        <styleClass>
+                            <String fx:value="btn-primary"/>
+                            <String fx:value="btn-blue"/>
+                            <String fx:value="radius-left"/>
+                        </styleClass>
+                    </Button>
+                    <Button fx:id="leftButton" onAction="#selectPrevious">
+                        <styleClass>
+                            <String fx:value="btn-primary"/>
+                            <String fx:value="btn-red"/>
+                            <String fx:value="radius-left"/>
+                        </styleClass>
+                    </Button>
+                    <Button fx:id="selectButton" onAction="#selectLevel">
+                        <styleClass>
+                            <String fx:value="btn-primary"/>
+                            <String fx:value="btn-orange"/>
+                            <String fx:value="radius-left"/>
+                        </styleClass>
+                    </Button>
+                    <Button fx:id="backButton" onAction="#openLevelView">
+                        <styleClass>
+                            <String fx:value="btn-primary"/>
+                            <String fx:value="btn-green"/>
+                            <String fx:value="radius-left"/>
+                        </styleClass>
+                    </Button>
+                </VBox>
+            </VBox>
+        </right>
+        <center>
+            <TilePane styleClass="tilePane-container">
+                <Button fx:id="level1Button" styleClass="btn-levels, btn-summer"/>
+                <Button fx:id="level2Button" styleClass="btn-levels, btn-winter"/>
+                <Button fx:id="level3Button" styleClass="btn-levels, btn-raining"/>
+            </TilePane>
+        </center>
+    </BorderPane>
+</GameView>

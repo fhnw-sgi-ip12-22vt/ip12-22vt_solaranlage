@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import ch.fhnw.solar.simulator.game.GameView?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<GameView fx:id="infoView" prefHeight="1080" prefWidth="1920" stylesheets="@../css/style.css"
+          xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="ch.fhnw.solar.simulator.info.InfoController">
+    <BorderPane>
+        <top>
+            <HBox>
+                <VBox styleClass="title, title-left, radius-right">
+                    <Label fx:id="infoTitleLabel"/>
+                </VBox>
+                <Region maxHeight="-Infinity" maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
+            </HBox>
+        </top>
+        <right>
+            <VBox alignment="TOP_RIGHT">
+                <Region maxHeight="100" maxWidth="-Infinity" VBox.vgrow="ALWAYS"/>
+                <VBox alignment="CENTER_RIGHT" spacing="50">
+                    <Button fx:id="backButton" onAction="#openLevelView">
+                        <styleClass>
+                            <String fx:value="btn-primary"/>
+                            <String fx:value="btn-blue"/>
+                            <String fx:value="radius-left"/>
+                        </styleClass>
+                    </Button>
+                    <Button fx:id="upButton">
+                        <styleClass>
+                            <String fx:value="btn-primary"/>
+                            <String fx:value="btn-red"/>
+                            <String fx:value="radius-left"/>
+                        </styleClass>
+                    </Button>
+                    <Button fx:id="downButton">
+                        <styleClass>
+                            <String fx:value="btn-primary"/>
+                            <String fx:value="btn-orange"/>
+                            <String fx:value="radius-left"/>
+                        </styleClass>
+                    </Button>
+                </VBox>
+            </VBox>
+        </right>
+        <center>
+            <VBox alignment="CENTER">
+                <VBox styleClass="info-text-container">
+                    <VBox spacing="10">
+                        <Label fx:id="welcomeLabel"/>
+                        <Label fx:id="gameExplanation1Label"/>
+                        <Label fx:id="rulesTitleLabel"/>
+                    </VBox>
+                    <ScrollPane fx:id="infoScrollPane" styleClass="scroll-container">
+                        <TilePane styleClass="info-cards-container">
+                            <HBox styleClass="card-style">
+                                <Label text="1."/>
+                                <Label fx:id="rule1Label"/>
+                            </HBox>
+                            <HBox styleClass="card-style">
+                                <Label text="2."/>
+                                <Label fx:id="rule2Label"/>
+                            </HBox>
+                            <HBox styleClass="card-style">
+                                <Label text="3."/>
+                                <Label fx:id="rule3Label"/>
+                            </HBox>
+                            <HBox styleClass="card-style">
+                                <Label text="4."/>
+                                <Label fx:id="rule4Label"/>
+                            </HBox>
+                            <HBox styleClass="card-style">
+                                <Label text="5."/>
+                                <Label fx:id="rule5Label"/>
+                            </HBox>
+                            <HBox styleClass="card-style">
+                                <Label text="6."/>
+                                <Label fx:id="rule6Label"/>
+                            </HBox>
+                            <HBox styleClass="card-style">
+                                <Label text="7."/>
+                                <Label fx:id="rule7Label"/>
+                            </HBox>
+                            <HBox styleClass="card-style">
+                                <Label text="8."/>
+                                <Label fx:id="rule8Label"/>
+                            </HBox>
+                        </TilePane>
+                    </ScrollPane>
+                    <VBox>
+                        <Label fx:id="closingLabel"/>
+                    </VBox>
+                </VBox>
+            </VBox>
+        </center>
+    </BorderPane>
+</GameView>

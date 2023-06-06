@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE suppressions PUBLIC
+        "-//Checkstyle//DTD SuppressionFilter Configuration 1.2//EN"
+        "https://checkstyle.org/dtds/suppressions_1_2.dtd">
+
+<suppressions>
+    <!-- Suppress packages view and data from any checks -->
+    <suppress checks="."
+              files="ch.fhnw.swc.mrs.view"/>
+
+    <!-- Suppress any none Java files from being checked -->
+    <suppress files=".+\.(?:txt|xml|csv|sh|xlsx|html|sql|eot|ttf|woff|css|png)$"
+              checks=".*"/>
+</suppressions>

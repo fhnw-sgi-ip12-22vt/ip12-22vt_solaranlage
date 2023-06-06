@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import ch.fhnw.solar.simulator.game.GameView?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<GameView fx:id="scoreView" prefHeight="1080" prefWidth="1920" stylesheets="@../css/style.css"
+          xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="ch.fhnw.solar.simulator.score.ScoreController">
+    <BorderPane>
+        <top>
+            <HBox>
+                <VBox styleClass="title, title-left, radius-right">
+                    <Label fx:id="scoreTitleLabel"/>
+                </VBox>
+                <Region maxHeight="-Infinity" maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
+            </HBox>
+        </top>
+        <right>
+            <VBox alignment="TOP_RIGHT">
+                <VBox spacing="50">
+                    <Region maxHeight="100" maxWidth="-Infinity" VBox.vgrow="ALWAYS"/>
+                    <Button fx:id="playAgainButton" onAction="#openGameView">
+                        <styleClass>
+                            <String fx:value="btn-primary"/>
+                            <String fx:value="btn-blue"/>
+                            <String fx:value="radius-left"/>
+                        </styleClass>
+                    </Button>
+                    <Button fx:id="chooseLevelButton" onAction="#openLevelView">
+                        <styleClass>
+                            <String fx:value="btn-primary"/>
+                            <String fx:value="btn-red"/>
+                            <String fx:value="radius-left"/>
+                        </styleClass>
+                    </Button>
+                    <Button fx:id="upButton">
+                        <styleClass>
+                            <String fx:value="btn-primary"/>
+                            <String fx:value="btn-orange"/>
+                            <String fx:value="radius-left"/>
+                        </styleClass>
+                    </Button>
+                    <Button fx:id="downButton">
+                        <styleClass>
+                            <String fx:value="btn-primary"/>
+                            <String fx:value="btn-green"/>
+                            <String fx:value="radius-left"/>
+                        </styleClass>
+                    </Button>
+                </VBox>
+            </VBox>
+        </right>
+        <center>
+            <VBox alignment="CENTER" styleClass="score-table-container">
+                <TableView fx:id="contactTable">
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                    </columnResizePolicy>
+                    <columns>
+                        <TableColumn fx:id="positionColumn">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="position"/>
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="nameColumn">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="name"/>
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="pointsColumn">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="points"/>
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="levelColumn">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="level"/>
+                            </cellValueFactory>
+                        </TableColumn>
+                    </columns>
+                </TableView>
+            </VBox>
+        </center>
+    </BorderPane>
+</GameView>

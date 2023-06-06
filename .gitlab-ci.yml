@@ -1,0 +1,42 @@
+# Build JAVA applications using Apache Maven (http://maven.apache.org)
+# For docker image tags see https://hub.docker.com/_/maven/
+
+variables:
+  MAVEN_CLI_OPTS: --batch-mode
+
+# run with docker, choose maven 3.9.0 with the latest Java and a small linux footprint
+image: maven:3.9.0-eclipse-temurin-19-alpine
+
+# Cache downloaded dependencies and plugins between builds.
+cache:
+  paths:
+    - .m2/repository
+    - target
+
+stages:
+  - build
+  - site
+
+build-job:
+  stage: build
+  script:
+    - echo "Maven compile started"
+    - mvn package
+  artifacts:
+    when: always
+    reports:
+      junit: target/surefire-reports/*.xml
+    paths:
+      - target/**/*.jar
+      - target/surefire-reports/*xml
+
+pages:
+  stage: site
+  script:
+    - mvn site
+    - mv target/site public
+  rules:
+    - when: always
+  artifacts:
+    paths:
+      - public
