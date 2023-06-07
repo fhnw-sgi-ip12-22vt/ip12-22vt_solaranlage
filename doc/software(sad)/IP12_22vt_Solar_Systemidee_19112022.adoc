@@ -1,0 +1,54 @@
+= Systemidee
+
+== Kernaufgabe des Systems
+
+Es soll ein Einzelspieler Game erstellt werden, welches Schüler und Schülerinnen der Sekundarstufe 1 die Optimierung des Stromverbrauchs bei einer Solaranlage näher bringen soll. Dies geschieht mittels einem Spiel, wo ein Tageszenario durchgespielt wird und physische Interaktion bietet. Je nach Optimierung des Stromes gibt dies einen guten oder schlechten Highscore.
+
+== Kategorie von System
+
+Die Art unseres Systems ist ein interaktives System, welches Daten/Inputs in Echtzeit speichert. Es bietet physische Interaktion, wobei ein Spielablauf im Zeitraffer einen Tag simuliert, mit vorgegebenem Szenario. Nach Abschluss des Spiels werden Daten gespeichert, welche später als Highscore angezeigt werden.
+
+== Wesentliche Qualitätsanforderungen
+
+Für die Umsetzung unseres Systems, werden folgende Qualitätsanforderungen eingehalten:
+
+- Benutzbarkeit:
+* Der Spieler soll die Grundfunktionen bzw. die Steuerung des Spiels innerhalb von zwei Minuten verstanden haben
+* Das System soll Spielern mit wenig Vorwissen zu Solarenergie, durch Spielhilfen und bildliche Darstellung, den Einstieg erleichtern
+* Der Graph, welcher die Stromproduktion und den Stromverbrauch darstellt soll als wichtiges Element dargestellt werden
+- Änderbarkeit:
+* Mit gut strukturiertem Code soll es möglich sein neue Funktionen hinzuzufügen
+* Es sollen Tests geschrieben werden, um die Hauptfunktionen zu testen und überprüfen
+* Die Qualität des Source Codes soll den Vorgaben entsprechen: https://www.cs.technik.fhnw.ch/confluence20/pages/viewpage.action?pageId=73105864
+- Funktionalität:
+* Das Wetter soll während dem Spiel klar ersichtlich sein
+* Das System benötigt kein Login oder spezielle Berechtigungen zum Ausführen
+* Bei möglichen Fehlern, soll eine detaillierte Fehlermeldung ausgegeben werden
+* Vor der Fertigstellung sollen mehrere Szenarien durchgespielt sein, welche einwandfrei funktionierten
+* Es werden mehrere Tests mit Testbenutzern zuvor durchgeführt
+* Es soll den definierten technischen Rahmenbedingungen entsprechen: https://www.cs.technik.fhnw.ch/confluence20/display/IP1222vt/IP12+-+Technische+Rahmenbedingungen
+- Effizienz:
+* Nach Bestätigungen von Eingaben soll die Ausführung des Prozesses direkt erfolgen. Die Wartezeit für den Spieler soll nicht mehr als fünf Sekunden betragen
+* Das System soll auf dem Raspberry Pi vollständig laufen, es werden keine weiteren Ressourcen benötigt
+- Übertragbarkeit:
+* Das System soll Lokal laufen und benötigt keine Internetverbindung
+* Das System soll vorinstalliert und verfügbar auf dem Raspberry Pi laufen
+- Zuverlässigkeit:
+* Sollte es technische Schäden geben beim Raspberry Pi, soll es möglich sein, das Gerät auszutauschen
+* Unser System soll robust genug sein, dass es nicht zu Abnutzungen kommt innerhalb eines Jahres, ab dem Zeitpunkt wo es produktiv benutzt wird
+* Das System soll die allgemeinen Anforderungen erfüllen: https://www.cs.technik.fhnw.ch/confluence20/display/IP1222vt/Allgemeine+Anforderungen+an+die+Projekte
+
+== Relevante Stakeholder
+
+Zu den relevanten Stakeholdern gehören folgende Personen bzw. Organisationen:
+[options="header"]
+|=============
+| Name  | Ansprechsperson | Beschreibung
+| Schüler*innen | | Schüler*innen der Sekundarstufe I, welche den Kosmos besuchen
+| Lehrperson | | Lehrpersonen der Schüler*innen, welche sie begleiten
+| Ausstellungsbetreuung  | | Mögliche Helfer vor Ort von Primeo
+| Primeo Energie  | Yvonne Zickermann | Rolle des Auftraggebers
+|=============
+== Schnittstellen zu externen Systemen
+
+Es gibt keine externen Systeme, welche Schnittstellen haben zu unserem System.

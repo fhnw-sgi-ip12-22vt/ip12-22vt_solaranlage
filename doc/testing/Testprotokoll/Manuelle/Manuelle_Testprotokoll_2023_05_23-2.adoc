@@ -1,0 +1,45 @@
+= Testprotokoll-Dokumentation: Button Press Test
+:toc: left
+:doctype: book
+:sectnums:
+:icons: font
+:source-highlighter: rouge
+:numbered:
+
+== Testtitel und Beschreibung
+
+Testtitel: Button-Drucktest
+
+Testbeschreibung:
+Dieses Testprotokoll dokumentiert den Button-Drucktest, bei dem alle 12 Knöpfe für eine Dauer von 2 Minuten gedrückt werden. Das Ziel dieses Tests ist es, die Funktionalität und Reaktion der Knöpfe sicherzustellen und sicherzustellen, dass alle Knöpfe korrekt auf Benutzereingaben reagieren.
+
+== Datum und Tester
+
+Datum: 2023-05-23
+
+Tester: William Cruz, Nick Koch
+
+== Testumgebung
+
+* Hardware: Raspberry Pi 4 Model B
+* Knöpfe: 12 Knöpfe am Raspberry Pi 4 angeschlossen
+* Betriebssystem: Raspbian OS
+
+== Testschritte
+
+1. Stellen Sie sicher, dass der Raspberry Pi 4 Model B ordnungsgemäß eingerichtet ist und die 12 Knöpfe korrekt angeschlossen sind.
+2. Starten Sie die Anwendung auf dem Raspberry Pi 4 Model B.
+3. Beginnen Sie den Test und drücken Sie nacheinander jeden der 12 Knöpfe.
+4. Halten Sie jeden Knopf für etwa 1 Sekunden (5sek) gedrückt und lassen Sie ihn dann wieder los.
+5. Wiederholen Sie den Vorgang für alle 12 Knöpfe, bis jeder Knopf mindestens einmal gedrückt wurde.
+6. Überprüfen Sie, ob die Knöpfe korrekt auf die Benutzereingaben reagieren und ob die entsprechenden Aktionen in der Anwendung ausgeführt werden.
+7. Wiederholen Sie die Schritte 3-6 für eine Dauer von insgesamt 2 Minuten.
+8. Machen Sie Notizen zu etwaigen Problemen oder Fehlfunktionen, die während des Tests auftreten.
+
+== Testergebnisse
+
+Während des 2-minütigen Tests reagierten alle 12 Knöpfe korrekt auf die Benutzereingaben. Die Aktionen, die mit den Knöpfen verknüpft sind, wurden ordnungsgemäß in der Anwendung ausgeführt. Es wurden keine Probleme oder Fehlfunktionen festgestellt.
+
+== Schlussfolgerung
+
+Der Button-Drucktest ergab positive Ergebnisse, da alle 12 Knöpfe ordnungsgemäß funktionierten und auf die Benutzereingaben reagierten. Die Anwendung reagierte schnell und zuverlässig auf die Button-Interaktionen. Basierend auf diesen Ergebnissen kann davon ausgegangen werden, dass die Knöpfe funktionsfähig und bereit für den Einsatz sind. Regelmäßige Tests sollten durchgeführt werden, um die Funktionalität der Knöpfe beizubehalten und mögliche Probleme frühzeitig zu identifizieren.

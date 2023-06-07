@@ -1,0 +1,105 @@
+[[section-building-block-view]]
+== Bausteinsicht
+
+=== Ebene 1 (Whitebox)
+
+==== Whitebox Gesamtsystem
+
+image::Ebene1.png["Ebene 1"]
+
+Eingabe -> Benutzer Inputs per Button
+
+Ausgabe -> Device wird im Graphen angezeigt und verbraucht Strom
+
+*Enthaltene Blackbox Elemente*
+
+[options="header"]
+|=============
+| Subsystem  | Kurzbeschreibung 
+| Level | Lässt das Spiel durchlaufen mit gegebenem Szenario.
+| WeatherAnimation | Stellt den Hintergrund dar mit allfälligem Wetterwechsel.
+| Devices | Lässt Verbraucher speichern mit ihren Eigenschaften und lässt sie starten und beenden.
+| Graph | Stellt den produzierten Solarstrom dar, wie auch den Verbrauch der einzelnen Geräten
+|=============
+
+Diese Subsysteme konzentrieren sich auf den Ablauf während eines Spiels. Es gibt jedoch noch mehr was nach dem beenden eines Spiels abläuft, wie der Highscore oder die spätere Levelauswahl.
+
+=== Ebene 1 Klassen
+
+Nachfolgend ist die Grafik des UMLs des gesamten Systems, mit untenstehender Beschreibung der Packages.
+
+image::UML.png["Ebene 1 UML"]
+
+
+[cols="1,4" options="header"]
+|=============
+| Package | Beschreibung
+| Game | Hier ist die Starterklasse definiert, von wo aus das System gestartet wird.
+| Level | Darin befinden sich alle Klassen welche mit der Darstellung der graphischen Oberfläche zu tun haben.
+| DataModel | Hier ist die Klasse untergebracht, welche die Struktur eines Spielers beschreibt. Dies wird für die Erstellung eines Users benötigt.
+| LevelSelect | Dies unterhält die View, wo man auswählen kann, welches Level man aktuell spielen möchte.
+| Score | Hier werden die Views für den Highscore deklariert. Dies inbegreift die PreScoreView und ScoreView. Bei diesen Views kann man den Highscore einsehen und zuvor einen Zufallsnamen auswählen.
+| Sonstiges | Der Solarsimulator, also die Starterklasse und die Clickables sind übergeordnet deklariert.
+|=============
+
+=== Ebene 2
+
+==== Whitebox Level
+
+image::Ebene2Level.png["Ebene 2 Level"]
+
+*Enthaltene Blackbox Elemente*
+
+[options="header"]
+|=============
+| Subsystem  | Kurzbeschreibung 
+| LevelController | Erstellt die Darstellung aller Komponenten der Levelview. Dies erfolgt über Java-FXML und wird durch ein fxml-File instanziert.
+| LevelModel | Holt sich die Daten zu den Devices und zur Solarproduktion. Es aktiviert und deaktiviert auch Geräte, welche angeschaltet werden.
+| DevicesView | Erstellt und verwaltet die Verbrauchsziele für alle Devices, welche ein Ziel definiert haben in den Properties.
+| Time | Verwaltet die Zeit während des Spieldurchlaufs.
+| PopupNotification | Erstellt ein Popup in Form eines Labels, dieses erscheint am rechten Bildschirm, wenn ein Gerät sich im Standby befindet. Es soll hinweisen, dass der Spieler dieses Gerät abschalten soll, damit nicht unnötig Strom verschwendet wird. Betrifft nur Geräte, welche an- und abschaltbar sind.
+|=============
+
+==== Whitebox WeatherAnimation
+
+image::Ebene2WeatherAnimation.PNG["Ebene 2 WeatherAnimation"]
+
+*Enthaltene Blackbox Elemente*
+
+[options="header"]
+|=============
+| Subsystem  | Kurzbeschreibung 
+| WeatherAnimationView | Hier wird die Darstellung der Sonne übernommen. Dies wird mit einer PathTransition bewerkstelligt.
+| LevelController | Die Animation für den Regen und Hintergrundwechsel erfolgt direkt im LevelController.
+|=============
+
+==== Whitebox Devices
+
+image::Ebene2Verbraucher.png["Ebene 2 Verbraucher"]
+
+*Enthaltene Blackbox Elemente*
+
+[options="header"]
+|=============
+| Subsystem  | Kurzbeschreibung 
+| DeviceLevelModel | Ist eine Erweiterung des DeviceModels. Gibt zusätzlich zum DeviceModel noch das Verbrauchsziel mit. Da dies pro Level unterschiedliche sein kann gibt es diese zusätliche Komponente.
+| DeviceModel | Hier werden die Verbraucher modelliert, welcher das Spiel beinhaltet. Auch kann überprüft werden, welche Verbraucher gerade aktiv oder inaktiv sind.
+| DeviceView | Stellt den Button/Label dar, welcher für jedes Gerät unterhalb des Graphen gezeichnet wird.
+| DevicesView | Verwaltet alle DeviceViews
+|=============
+
+==== Whitebox Graph
+
+image::Ebene2Graph.PNG["Ebene 2 Graph"]
+
+*Enthaltene Blackbox Elemente*
+
+[options="header"]
+|=============
+| Subsystem  | Kurzbeschreibung 
+| DeviceLevelModel | Gibt dem Graphen die in einem Level verwendeten Geräte wieder.
+| DevicesView | Der Graph überprüft ob ein Input von den Geräten kommt und aktualisiert die Geräteziele, wenn das Gerät aktiv ist.
+| GraphView | Hier wird der Graph dargestellt. Er besteht aus einem StackedAreaChart, das heisst alle Geräte werden gestapelt dargestellt. In einer Methode-Step, wird dann laufend das Spiel durchgespielt.
+| SolarModel | Von hier holt sich der Graph die Daten zu den Solarstrompunkten, bzw. der Solarstromproduktion.
+| Time | Während ein Spiel abläuft, wird die Zeit erhöht. Der Wert, welcher für die Zeit gesetzt wird und welcher als nächster kommt, wird in der Komponente Time verwaltet. Der Zeit Wert entspricht den echten Zeitwerten eines Tages, wobei ein Zeitraffer darüber liegt.
+|=============

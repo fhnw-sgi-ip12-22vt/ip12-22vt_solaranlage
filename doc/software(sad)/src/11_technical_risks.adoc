@@ -1,0 +1,18 @@
+[[section-technical-risks]]
+== Risiken und technische Schulden
+
+[cols="2,5,5" options="header"]
+|=============
+| Priorität | Risiko | Mögliche Massnahmen
+| Hoch | Button kann nicht angesprochen werden | Möglichst früh testen
+| Hoch | Alter Code geht nicht mehr, nachdem neue Funktionen eingefügt wurden. | Möglichst nach der Implementierung von einer Funktion, zugehörige Testklassen schreiben, um solche 
+| Mittel | Technisches Know-How fehlt | Sich im Team besprechen, was alles benötigt wird an Wissen und wo noch Wissenslücken bestehen.
+| Mittel | Overengineering von einfachen Features | Frist für Implementierung des Features setzen oder allenfalls zu zweit darauf schauen, damit man sich nicht in Details verliert
+| Mittel | Unterschätzung der Komplexität | Implementierung in kleine Arbeitspakete gliedern, damit es übersichtlich bleibt.
+| Mittel | Langlebigkeit von kleinen Teilen | Vor der produktiven Nutzung, testen ob es gewissen Widerstand aushält
+| Tief | Verstrickung in zu vielen Bugs / Software funktioniert nicht mehr | Mit vielen Commits arbeiten in Gitlab, damit man auf eine stabile Version zurück gehen kann.
+Fehler zeitnah zu entdecken.
+| Tief | Hardware bzw. Raspberry Pi geht kaputt | Schnellstmöglich ersetzen
+| Tief | Code geht verloren | Beim Programmieren möglichst immer abspeichern, mit Commit auf Gitlab besteht dann keine Gefahr mehr.
+|=============
+

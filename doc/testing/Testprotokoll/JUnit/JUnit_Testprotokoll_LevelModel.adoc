@@ -1,0 +1,103 @@
+= JUnit Testprotokoll
+:toc: left
+:doctype: book
+:sectnums:
+:icons: font
+:source-highlighter: rouge
+:numbered:
+
+== Einführung
+
+Die folgende Dokumentation beschreibt die JUnit-Tests für das LevelModel im Solarstromsimulator.
+Ziel ist es, die Funktionalität des LevelModels und seiner Komponenten zu testen und sicherzustellen, dass sie den Anforderungen entsprechen und fehlerfrei funktionieren.
+Die Testfälle konzentrieren sich auf die automatisierte Überprüfung der Initialisierung, Registrierung und Abmeldung von Geräten im LevelModel.
+
+== Testumgebung
+
+Die JUnit-Tests wurden in folgender Umgebung durchgeführt:
+
+- MacBook Pro (Retina, 15-inch, Mid 2015), 2.2 GHz Quad-Core Intel Core i7
+- Raspbian OS (Raspberry Pi)
+
+== Testfälle
+
+=== Testfall 1: Initialisierung des Geräts
+
+[cols="2,5,5",options="header"]
+|===
+|ID
+|Testfall
+|Beschreibung
+
+|T01
+|Initialisierung des Geräts
+|Überprüft, ob das Gerät im LevelModel korrekt initialisiert wird.
+
+|===
+
+=== Testfall 2: Registrierung des Geräts
+
+[cols="2,5,5",options="header"]
+|===
+|ID
+|Testfall
+|Beschreibung
+
+|T02
+|Registrierung des Geräts
+|Überprüft, ob das Gerät im LevelModel korrekt registriert wird.
+
+|===
+
+=== Testfall 3: Abmeldung des Geräts
+
+[cols="2,5,5",options="header"]
+|===
+|ID
+|Testfall
+|Beschreibung
+
+|T03
+|Abmeldung des Geräts
+|Überprüft, ob das Gerät im LevelModel korrekt abgemeldet wird.
+
+|===
+
+== Testprotokoll
+
+Das Testprotokoll dokumentiert die Ergebnisse der JUnit-Tests für das LevelModel.
+
+=== Testprotokoll - Testfall 1: Initialisierung des Geräts (T01)
+
+* Testfall-ID: T01
+* Datum der Durchführung: 2023-05-21
+* Tester: William Cruz
+* Testergebnis: Erfolgreich
+* Bemerkungen: Das Gerät wird ordnungsgemäss initialisiert und die Methode "isRunning" gibt den erwarteten Wert zurück.
+
+=== Testprotokoll - Testfall 2: Registrierung des Geräts (T02)
+
+* Testfall-ID: T02
+* Datum der Durchführung: 2023-05-21
+* Tester: William Cruz
+* Testergebnis: Erfolgreich
+* Bemerkungen: Das Gerät wird korrekt im LevelModel registriert und die Methode "isRunning" gibt den erwarteten Wert zurück.
+
+=== Testprotokoll - Testfall 3: Abmeldung des Geräts (T03)
+
+* Testfall-ID: T03 Datum der Durchführung: 2023-05-21
+* Tester: William Cruz
+* Testergebnis: Erfolgreich
+* Bemerkungen: Das Gerät wird ordnungsgemäß aus dem LevelModel abgemeldet und die Methode "isRunning" gibt den erwarteten Wert zurück.
+
+Das Testprotokoll soll regelmäßig überprüft und ausgewertet werden, um die Qualität des LevelModels im Solarstromsimulator kontinuierlich zu verbessern.
+Dabei sollten insbesondere Probleme oder Unstimmigkeiten identifiziert und entsprechende Maßnahmen ergriffen werden, um die Funktionalität und Zuverlässigkeit des LevelModels sicherzustellen.
+
+== Testprotokoll Referenzen
+
+1. link:JUnit_Testprotokoll_LevelModel.adoc[JUnit-LevelModel 2023-05-21]
+2. link:JUnit_Testprotokoll_Time.adoc[JUnit-Time 2023-05-21]
+3. link:JUnit_Testprotokoll_DeviceLevelModel.adoc[JUnit-DeviceLevelModel 2023-05-21]
+4. link:JUnit_Testprotokoll_PreScoreModel.adoc[JUnit-PreScoreModel 2023-05-21]
+
+

@@ -1,0 +1,160 @@
+[[section-design-decisions]]
+== Architekturentscheidungen
+
+=== Graphdarstellung
+
+Wie wird die Stromproduktion und der Stromverbrauch graphisch dargestellt werden?
+
+*Zur Fragestellung*
+
+Laut Qualitätsziel 2 ist es wichtig dass während eines Spieldurchlaufs sowohl die Stromproduktion als auch der Stromverbrauch ersichtlich ist. Uns ist auch wichtig, das dies explizit mit einem Graphen und nicht nur mit zwei Balken dargestellt wird. Dies hilft auch dem Lerneffekt für die Schüler*innen. Unser System wird graphisch mit JavaFX umgesetzt. JavaFX bietet dabei mehrere Graphikelemente, welche benutzt werden können zum darstellen.
+
+*Relevante Einflussfaktoren*
+
+* Randbedingungen
+* Input von Verbrauchern
+* Spielstart der ausgelöst wird
+* Verschiedene Wetterszenarien pro Level
+* Massgeblich betroffene Qualitätsmerkmale (-> 10 Qualitätsanforderungen)
+* Qualitätsziel 2 - Ersichtlichkeit der Stromproduktion und Stromverbrauch
+* Betroffene Risiken
+
+*Betrachtete Alternativen*
+
+*Option (1): LineChart*
+
+Der LineChart stellt die Datensätze in verschieden farbigen Linien dar. Dabei werden die erstellten Datenpunkte miteinander verbunden. Für jeden Datensatz wird dabei ein "XYChart.Series" erstellt, wo die Datenpunkte hinzugefügt werden. Die Datensätze müssen nach dem hinzufügen des LineChart in der Scene, dem LineChart hinzugefügt werden. Die Datensätze für die Verbraucher und für die Stromproduktion sind vorerstellt und werden im Spielloop nur noch durch Datenpunkte ergänzt.
+
+image::LineChart.png["Beispiel LineChart"]
+
+*(+) Positiv*
+
+Der LineChart lässt Datensätze einfach unabhängig voneinander darstellen. Er bietet einige Anpassungsmöglichkeiten über ein CSS-Stylesheet. Die verschiedenen Linien werden per Default in verschiedenen Farben angezeigt und sind gut ersichtlich.
+
+*(-) Negativ*
+
+Da die Datensätze bzw. Linien unabhängig voneinander sind, muss für jeden neu gestarteten Verbraucher der Gesamtstromverbrauch der anderen Verbraucher dazu gezählt werden. Laut unserer Vision sollen die Geräte gestapelt den Stromverbrauch anzeigen, wodurch schnell der Gesamtstromverbrauch ersichtlich ist.
+
+Ein weiterer negativer Punkt ist das die Datenpunkte die ganze Zeit erstellt werden müssen auch wenn der Verbraucher gerade ausgeschaltet ist. Dies muss gemacht werden, weil sonst der Anfangspunkt des zweiten startens eines Verbrauchers die Linie verbindet mit dem Schluss des ersten Einschaltens und diese beiden Punkte sind nicht immer auf der Y-Koordinate 0.
+
+*Option (2): StackedAreaChart*
+
+Der StackedAreaChart stellt ähnlich wie der LineChart die Datensätze in verschieden farbigen Linien dar. Zusätzlich wird der Bereich unter der Linie mit der selben Farbe ausgefüllt. Ein grosser Unterschied zum LineChart ist noch, dass die Datenpunkte "Stacked" angegeben werden. "Stacked" bedeutet das auf der Y-Achse der gesamte Wert aller bisherigen Datensätzen auf der Koordinate default schon mitgerechnet sind, so werden eigentlich gleich grosse Datenpunkte übereinander gestapelt.
+
+image::StackedAreaChart.png["Beispiel Stacked AreaChart"]
+
+*(+) Positiv*
+
+Gleich wie der LineChart hat auch der StackedAreaChart verschiedene Farben für jeden Datensatz. Zusätzlich wird der Bereich unterhalt mit der selben Farbe ausgefüllt wodurch die ersichtlichkeit erhöht wird. Wie der Name schon sagt ist der StackedAreaChart "gestapelt", das heisst das die verschiedenen Datensätze gestapelt werden und nicht immer der Gesamtverbrauch berücksichtigt werden muss beim erstellen eines Datenpunkts.
+
+*(-) Negativ*
+
+Gleich wie beim LineChart ist auch hier ein negativer Punkt dass die ganze Zeit Datenpunkte erstellt werden müssen. Dies ist weil sonst der Anfangspunkt des zweiten startens eines Verbrauchers die Linie verbindet mit dem Schluss des ersten Einschaltens und diese beiden Punkte sind nicht immer auf der Y-Koordinate 0.
+
+*Entscheidung*
+
+Wir haben uns für den StackedAreaChart entschieden. In unserem Anwendungsfall ist er besser geeignet, da mehrere Verbraucher gleichzeitig laufen können und somit die Übersicht besser ist bei StackedAreaChart.
+
+=== Zeitverwaltung
+
+Wie wird die Zeit simuliert und gespeichert?
+
+*Zur Fragestellung*
+
+Ein zentraler Bestandteil unseres System, ist der Spielablauf. Bei einem Spielablauf wird die Solargenerierung und der Verbrauch von Verbrauchern während eines ganzen Tags durchgelaufen. Da es einen Unterschied macht, zu welchem Zeitpunkt ein Verbraucher eingeschaltet wird, da nicht immer gleich viel Strom generiert wird, muss der Zeitpunkt des Einschalten und allfällige Länge des Gebrauchs festgehalten werden. Bei dieser Fragestellung beschäftigen wir uns, wie wir mit dem speichern der Zeit umgehen und wie der Spielloop durchläuft.
+
+*Relevante Einflussfaktoren*
+
+* Randbedingungen
+* Input von Verbrauchern
+* Spielstart der ausgelöst wird
+* Massgeblich betroffene Qualitätsmerkmale (-> 10 Qualitätsanforderungen)
+* Betroffene Risiken
+
+*Betrachtete Alternativen*
+
+Nachfolgend sind die beiden Varianten, wo man den Spielloop definieren kann. Ausgeführt wird der Loop mit einem ScheduledExecutorService, damit dieser in regelmässigen Abständen wiederholt ausgeführt wird.
+
+*Option (1): JavaFX Timeline*
+
+JavaFX Timeline wird benutzt um flexible Formen von Animationen zu erstellen. Die Timeline arbeitet mit Keyframes, die einzeln und sequentiell verarbeitet werden. Jeder Keyframe wird dabei in einem bestimmten Zeitintervall verarbeitet.
+
+image::Timeline_Beispiel.png["Beispiel Timeline"]
+
+*(+) Positiv*
+
+Es ist Bestandteil der JavaFX Library, welche wir benutzen für die Umsetzung. Auch ist die Timeline passend um Animationen zu erstellen, welcher unser Graph ist. Kann auch unterbrochen werden wenn nötig.
+
+*(-) Negativ*
+
+Es ist etwas umständlich die richtigen Zeitabstände zwischen den Zyklen zu haben. Zudem ist die Timeline davon abhängig das JavaFX vorhanden ist.
+
+*Option (2): Runnable*
+
+Runnable ist ein Interface im java.lang package. Das Runnable hat eine einzige Methode run(), welche durch das Interface implementiert ist. Wie ein Thread kann es gebraucht werden um Prozesse zu starten und zu wiederholen.
+
+image::Runnable_Beispiel.png["Beispiel Runnable"]
+
+*(+) Positiv*
+
+Mehrere Threads teilen sich das gleiche Objekt. Die Zeitabstände sind leichter zu konfigurieren und es erweitert (implements) eine Klasse, wodurch diese noch weiter erweiter werden kann im Nachhinein. 
+
+*(-) Negativ*
+
+Es besteht nur aus der Methode run(), worin die ganze Logik verarbeitet wird. Es kann auch kein ExceptionHandling mit Runnables gemacht werden.
+
+*Entscheidung*
+
+Nach Absprache im Team haben wir beide Möglichkeiten als nützlich befunden, uns jedoch für die JavaFX Timeline entschieden. Uns ist auch wichtig dass man das Spiel pausieren kann, was mit dieser Methode recht einfach ist. Es kann auch für die Sonnenanimation verwendet werden.
+
+=== Darstellungstechnologie
+
+Mit welcher Methode/Technologie werden die verschiedenen Views dargestellt?
+
+*Zur Fragestellung*
+
+Unser Spiel enthält mehrere Views und jede View hat mehrere UI-Elemente, welche miteinander agieren sollen und graphisch gut aussehen müssen. Da die normale Programmierung recht zeitaufwändig ist für die Gestaltung der Views und wir im Team nicht alle gleich gut programmieren können, haben wir uns alternativen angeschaut, womit es schneller bzw. einfacher gehen könnte.
+
+*Relevante Einflussfaktoren*
+
+* Randbedingungen
+* Wunsch von Kunde
+* UI Design aus Usability Dokument
+* Massgeblich betroffene Qualitätsmerkmale (-> 10 Qualitätsanforderungen)
+* Betroffene Risiken
+
+*Betrachtete Alternativen*
+
+Nachfolgend sind die beiden Varianten, womit man das ganze darstellen kann. Beide sollen mit Java laufen und keine Komplikationen mit dem Rest des Codes geben.
+
+*Option (1): Gewöhnliches JavaFX*
+
+JavaFX wird für die Darstellung von UI-Komponenten benutzt, wobei dies hauptsächlich über den Code geschieht. Dort wird die Position und das Aussehen jedes einzelnen Elementes genutzt.
+
+*(+) Positiv*
+
+Man kann eine klare Struktur definieren und die Elemente können einfach weiterverwendet werden um mit anderen Methoden und Klassen zu interagieren.
+
+*(-) Negativ*
+
+Oft weiss man nicht wie das programmierte in der View aussieht. Das Programmieren ist meist etwas Try and Error, bis man mit der Positionierung zufrieden ist.
+
+*Option (2): Java FXML*
+
+Java-FXML benutzt auch JavaFX, es beinhaltet jedoch die Erweiterung mit FXML-Dateien. Diese enthalten die Initialisierung und Position der Elemente.
+
+image::Runnable_Beispiel.png["Beispiel Runnable"]
+
+*(+) Positiv*
+
+Es braucht nicht viel Verständniss vom Programmieren. Mit dem SceneBuilder Framework, kann die einzelnen Views per Drag and Drop einfügen. Es spart also Zeit.
+
+image::Scenebuilder.PNG["SceneBuilder"]
+
+*(-) Negativ*
+
+Es kommen mehr Files hinzu zum Projekt durch die FXML-Dateien. Zudem muss in jeder View noch jedes einzelne Element angegeben werden, damit es weiterverwendet werden kann. Auch die Initialisierung ist nicht mehr so klar, weil sie nicht mehr im Konstruktor geschieht sondern nachher.
+
+*Entscheidung*
+
+Da wir am Ende unseres Projektes etwas in Zeitnot geraten sind, haben wir uns für Java-FXML entschieden. Damit ging die Erstellung der Views ziemlich rasch. Jedoch sind manche Elemente, wie der Graph immer noch mit gewöhnlichem JavaFX definiert. Dies ist dann meist ein Untercontainer von einem FXML-Element.

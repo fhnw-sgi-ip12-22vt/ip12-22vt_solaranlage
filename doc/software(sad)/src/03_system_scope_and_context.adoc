@@ -1,0 +1,31 @@
+[[section-system-scope-and-context]]
+== Kontextabgrenzung
+
+=== Fachlicher Kontext
+
+image::Fachlicher_Kontext.png["Fachlicher Kontext"]
+
+[cols="2,5" options="header"]
+|=============
+| Element  | Beschreibung 
+| Solarsimulator | Unser System
+| Schüler*innen | Spielen das Spiel beim Energie Kosmos. Möchten möglichst Spass beim spielen erleben. 
+| Primeo Energie | Sind nach der Fertigstellung zuständig für den Unterhalt des Systems.
+| Highscore Datenbank | Nach einem Spieldurchlauf, wird der Score in eine Highscore Datenbank hochgeladen. Von dort werden die weiteren Scores geholt bei der Auflistung der Highscores.
+|=============
+
+=== Technischer Kontext
+
+image::Technischer_Kontext.png["Technischer Kontext"]
+
+[cols="2,5" options="header"]
+|=============
+| Element  | Beschreibung 
+| Raspberry Pi | Die Hardware auf dem das System läuft
+| Schüler*innen | Spielen das Spiel durch betätigen der Buttons 
+| Buttons | Dienen zur Steuerung des Spiels. Durch betätigung der Buttons wird die entsprechende Funktion vom Raspberry Pi ausgeführt.
+| Screen | Der Raspberry Pi stellt darauf das Spiel dar
+| Verbraucher | Dies sind physische Gegenstände. Durch einstecken in das Modell durch die Schüler*innen, werden sie aktiviert. Dies bedeutet dass sie je nach Eigenschaft gewissen Strom produzieren.
+|=============
+
+Die Verbindung mit einem USB-Stick war am Anfang des Projektes noch eine mögliche Idee zum hinzufügen. Für dies hatten wir jedoch nicht mehr genügend Zeit und somit ist dies nicht umgesetzt worden.

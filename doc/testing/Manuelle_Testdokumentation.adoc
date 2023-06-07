@@ -1,0 +1,107 @@
+= Manuelle Testdokumentation
+:toc: left
+:doctype: book
+:sectnums:
+:icons: font
+:source-highlighter: rouge
+:numbered:
+
+== Einführung
+
+Die folgende Dokumentation beschreibt die manuellen Tests für den Solarstromsimulator.
+Ziel ist es, die Funktionalität des Solarstromsimulators in verschiedenen Szenarien zu testen, um sicherzustellen, dass er den Anforderungen entspricht und fehlerfrei funktioniert.
+
+== Testfallkategorien
+
+Die Testfälle sind in die folgenden Kategorien unterteilt:
+
+1. Funktionalität
+2. Benutzerfreundlichkeit
+3. Leistung
+
+== Testfälle
+
+=== Funktionalität
+
+[cols="2,5,5",options="header"]
+|===
+|ID
+|Testfall
+|Beschreibung
+
+|F01
+|Start
+|Der Simulator soll gestartet werden, um sicherzustellen, dass er ordnungsgemäß startet und bereit zum Spielen ist. Dabei soll überprüft werden, ob alle Elemente der Benutzeroberfläche korrekt geladen werden und die Simulation startbereit ist.
+
+|F02
+|Stopp
+|Der Simulator soll ausgeschaltet werden, um sicherzustellen, dass er ordnungsgemäß heruntergefahren werden kann. Dabei sollen alle Ressourcen ordnungsgemäß freigegeben und der Zustand der Anwendung korrekt gespeichert werden.
+
+|F03
+|Taskerfüllung
+|Eine Aufgabe soll erfüllt werden, um sicherzustellen, dass sie als erfüllt markiert wird. Dabei soll überprüft werden, ob die Aufgabenliste aktualisiert wird und ob die erfüllte Aufgabe in der Historie der erfüllten Aufgaben erscheint.
+
+|F04
+|Erkennung von Buttons
+|Die Aktionen der Buttons sollen ausgeführt werden, um sicherzustellen, dass sie korrekt erkannt werden. Dabei soll überprüft werden, ob die entsprechenden Funktionen in der Anwendung ausgelöst werden und ob die Benutzeroberfläche entsprechend aktualisiert wird.
+
+|===
+
+=== Benutzerfreundlichkeit
+
+[cols="2,5,5",options="header"]
+|===
+|ID
+|Testfall
+|Beschreibung
+
+|U01
+|Bedienung der Benutzeroberfläche
+|Die Bedienung der Benutzeroberfläche soll getestet werden, um sicherzustellen, dass sie intuitiv und benutzerfreundlich ist. Dabei sollen alle Elemente der Benutzeroberfläche, wie Menüs, Schaltflächen und Eingabefelder, überprüft werden.
+
+|U02
+|Reaktionszeit der Anwendung
+|Die Reaktionszeit der Anwendung soll überprüft werden, um sicherzustellen, dass sie schnell und flüssig reagiert. Dabei sollen verschiedene Aktionen, wie das Starten der Simulation, das Wechseln von Menüs und das Aktualisieren von Anzeigen, getestet werden.
+
+|===
+
+=== Leistung
+
+[cols="2,5,5",options="header"]
+|===
+|ID
+|Testfall
+|Beschreibung
+
+|P01
+|Lasttest
+|Der Simulator soll unter hoher Last getestet werden, um sicherzustellen, dass er auch bei vielen gleichzeitigen Benutzern stabil und zuverlässig funktioniert. Dabei sollen die Reaktionszeiten der Anwendung und die Ressourcennutzung überwacht werden.
+
+|P02
+|Stresstest
+|Der Simulator soll einem Stresstest unterzogen werden, um sicherzustellen, dass er auch unter extremen Bedingungen stabil und zuverlässig funktioniert. Dabei sollen die Grenzen der Anwendung ausgelotet und mögliche Schwachstellen identifiziert werden.
+
+|===
+
+== Testprotokoll
+
+Das Testprotokoll soll die Ergebnisse der manuellen Tests dokumentieren.
+Für jeden Testfall sollen die folgenden Informationen aufgezeichnet werden:
+
+1. Testfall-ID
+2. Datum der Durchführung
+3. Tester (Name oder Benutzername)
+4. Testergebnis (erfolgreich/nicht erfolgreich)
+5. Bemerkungen (z. B. aufgetretene Probleme oder Verbesserungsvorschläge)
+
+Die Testprotokolle sollen regelmäßig überprüft und ausgewertet werden, um die Qualität der Anwendung kontinuierlich zu verbessern.
+Dabei sollen insbesondere Probleme oder Schwachstellen identifiziert und entsprechende Maßnahmen zur Behebung eingeleitet werden.
+
+== Testprotokoll-Links
+
+Hier sind die Links zu den vorhandenen Testprotokollen:
+
+1. link:Testprotokoll/Manuelle/Manuelle_Testprotokoll_2023_04_04.adoc[Stabilitätstest der Knöpfe Test 2023-04-04]
+2. link:Testprotokoll/Manuelle/Manuelle_Testprotokoll_2023_04_25.adoc[Stabilitätstest der Knöpfe Test 2023-04-25]
+3. link:Testprotokoll/Manuelle/Manuelle_Testprotokoll_2023_05_23-1.adoc[All-Day Stability Test 2023-05-23]
+4. link:Testprotokoll/Manuelle/Manuelle_Testprotokoll_2023_05_23-2.adoc[Button-Drucktest 2023-05-23]

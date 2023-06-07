@@ -1,0 +1,218 @@
+= JUnit Testdokumentation
+:toc: left
+:doctype: book
+:sectnums:
+:icons: font
+:source-highlighter: rouge
+:numbered:
+
+== Einführung
+
+Die folgende Dokumentation beschreibt die JUnit-Tests für das DeviceLevelModel.
+Das DeviceLevelModel repräsentiert ein Gerät im Spiel und enthält Informationen wie den Namen, den Gerätetyp, den Leistungsplan und das Nutzungsziel.
+Die JUnit-Tests konzentrieren sich auf die Überprüfung der korrekten Initialisierung des Geräts sowie seiner Funktionen und Eigenschaften.
+
+== Testumgebung
+
+Die JUnit-Tests wurden in folgender Umgebung durchgeführt:
+
+- MacBook Pro (Retina, 15-inch, Mid 2015), 2.2 GHz Quad-Core Intel Core i7
+- Raspbian OS (Raspberry Pi)
+
+== Testfallkategorien
+
+Die Testfälle sind in die folgenden Kategorien unterteilt:
+
+1. Funktionalität
+2. Zuverlässigkeit
+3. Leistung
+
+== Testfälle
+
+=== Funktionalität
+
+[cols="2,5,5",options="header"]
+|===
+|ID
+|Testfall
+|Beschreibung
+
+|F01
+|Geräteinitialisierung
+|Überprüfung, ob das Gerät korrekt initialisiert wurde und die entsprechenden Getter-Methoden die erwarteten Werte liefern.
+
+|F02
+|Standby-Modus
+|Überprüfung, ob das Gerät korrekt in den Standby-Modus versetzt werden kann und die Methode `getIsOnStandby` den erwarteten Wert zurückgibt.
+
+|F03
+|Gerätestatus
+|Überprüfung, ob das Gerät korrekt gestartet bzw. gestoppt werden kann und die Methode `isRunning` den erwarteten Wert zurückgibt.
+
+|F04
+|Nutzungsziel erhöhen
+|Überprüfung, ob das Gerät sein Nutzungsziel korrekt erhöhen kann und die Methode `getUsageDone` den erwarteten Wert zurückgibt.
+
+|===
+
+=== Zuverlässigkeit
+
+[cols="2,5,5",options="header"]
+|===
+|ID
+|Testfall
+|Beschreibung
+
+|Z01
+|Geräteinitialisierung
+|Überprüfung der korrekten Initialisierung des Geräts und der Zuverlässigkeit der Getter-Methoden.
+
+|Z02
+|Standby-Modus
+|Überprüfung der korrekten Funktion des Standby-Modus und der Zuverlässigkeit der Methode `getIsOnStandby`.
+
+|Z03
+|Gerätestatus
+|Überprüfung der korrekten Funktion des Gerätestatus und der Zuverlässigkeit der Methode `isRunning`.
+
+|Z04
+|Nutzungsziel erhöhen
+|Überprüfung der korrekten Funktion zur Erhöhung des Nutzungsziels und der Zuverlässigkeit der Methode `getUsageDone`.
+
+|===
+
+=== Leistung
+
+[cols="2,5,5",options="header"]
+|===
+|ID
+|Testfall
+|Beschreibung
+
+|P01
+|Geräteinitialisierung
+|Überprüfung der Leistung bei der Initialisierung des Geräts und der Ausführung der Getter-Methoden.
+
+|P02
+|Standby-Modus
+|Überprüfung der Leistung des Standby-Modus und der Methode `getIsOnStandby`.
+
+|P03
+|Gerätestatus
+|Überprüfung der Leistung des Gerätestatus und der Methode `isRunning`.
+
+|P04
+|Nutzungsziel erhöhen
+|Überprüfung der Leistung bei der Erhöhung des Nutzungsziels und der Methode `getUsageDone`.
+
+|===
+
+== Testprotokoll
+
+Das Testprotokoll dokumentiert die Ergebnisse der JUnit-Tests für das DeviceLevelModel.
+Für jeden Testfall werden die folgenden Informationen festgehalten:
+
+1. Testfall-ID
+2. Datum der Durchführung
+3. Tester (Name oder Benutzername)
+4. Testergebnis (erfolgreich/nicht erfolgreich)
+5. Bemerkungen (z. B. aufgetretene Probleme oder Verbesserungsvorschläge)
+
+=== Funktionalität
+
+[cols="2,3,3,3",options="header"]
+|===
+|Testfall-ID
+|Datum
+|Tester
+|Testergebnis
+
+|F01
+|2023-05-21
+|William Cruz
+|Erfolgreich
+
+|F02
+|2023-05-21
+|William Cruz
+|Erfolgreich
+
+|F03
+|2023-05-21
+|William Cruz
+|Erfolgreich
+
+|F04
+|2023-05-21
+|William Cruz
+|Erfolgreich
+
+|===
+
+=== Zuverlässigkeit
+
+[cols="2,3,3,3",options="header"]
+|===
+|Testfall-ID
+|Datum
+|Tester
+|Testergebnis
+
+|Z01
+|2023-05-21
+|William Cruz
+|Erfolgreich
+
+|Z02
+|2023-05-21
+|William Cruz
+|Erfolgreich
+
+|Z03
+|2023-05-21
+|William Cruz
+|Erfolgreich
+
+|Z04
+|2023-05-21
+|William Cruz
+|Erfolgreich
+
+|===
+
+=== Leistung
+
+[cols="2,3,3,3",options="header"]
+|===
+|Testfall-ID
+|Datum
+|Tester
+|Testergebnis
+
+|P01
+|2023-05-21
+|William Cruz
+|Erfolgreich
+
+|P02
+|2023-05-21
+|William Cruz
+|Erfolgreich
+
+|P03
+|2023-05-21
+|William Cruz
+|Erfolgreich
+
+|P04
+|2023-05-21
+|William Cruz
+|Erfolgreich
+
+|===
+
+=== Testprotokoll Referenzen
+1. link:JUnit_Testprotokoll_LevelModel.adoc[JUnit-LevelModel 2023-05-21]
+2. link:JUnit_Testprotokoll_Time.adoc[JUnit-Time 2023-05-21]
+3. link:JUnit_Testprotokoll_DeviceLevelModel.adoc[JUnit-DeviceLevelModel 2023-05-21]
+4. link:JUnit_Testprotokoll_PreScoreModel.adoc[JUnit-PreScoreModel 2023-05-21]

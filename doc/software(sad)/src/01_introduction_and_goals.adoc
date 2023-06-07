@@ -1,0 +1,38 @@
+[[section-introduction-and-goals]]
+== Einführung und Ziele
+
+Primeo Energie möchte infolge der Ausstellung Kosmos mehrere Ausstellungsobjekte. Eines davon soll von unserem Team zum Thema Solaranlage erstellt werden. Es soll ein interaktives Spiel erstellt werden, welches für Sekundarschüler*innen Stufe 1 geeignet sein soll. 
+
+Das Spiel wird ein Ausstellungsobjekt mit integrierter Software, welcher über ein Raspberry Pi läuft. Von der Software aus wird das Spiel gestartet und gehandhabt. Mehr dazu ist in der Systemidee zu finden.
+
+=== Aufgabenstellung
+
+Die Aufgabe ist es ein Spiel zu erstellen, welches auf einem Raspberry Pi läuft und als Ausstellungstück für Primeo Energie dient.
+Allgemeine Anforderungen: https://www.cs.technik.fhnw.ch/confluence20/display/IP1222vt/Allgemeine+Anforderungen+an+die+Projekte
+
+
+
+=== Qualitätsziele
+
+Nachfolgen die 3 wichtigsten Qualitätsziele aufgeführt geordnet nach Priorität.
+
+[cols="1,4,8" options="header"]
+|=============
+| ID | Qualitätsziel | Motivation und Erläuterung
+| 1 | Robustheit des Systems (Verfügbarkeit) | Der Solarsimulator soll am Primeo Energiekosmos für Schüler*innen zur Verfügung stehen, dadurch wird er einiger Belastung ausgesetzt.
+| 2 | Ersichtlichkeit der Stromproduktion und Stromverbrauch (Funktionsfähigkeit) | Anhand einer Graphik ist ersichtlich wie sich die Stromproduktion der Solarnanlage und der Verbrauch von Verbrauchern über die Zeit entwickelt.
+| 3 | Ansprechbarkeit von mehreren Buttons (Kapazität) | Es werden etwa ein halbes Dutzend Buttons für die Spielsteuerung eingesetzt. Dabei hat jeder Button eine andere Fähigkeit, welche durch das betätigen ausgelöst wird.
+|=============
+
+=== Stakeholder
+
+[cols="2,5" options="header"]
+|=============
+| Rolle / Personennamen | Erwartungshaltung
+| Schüler*innen | Erwarten ein Spiel, welches Spass in der Nutzung macht und einen Lerneffekt bietet bezüglich Solaranlagen.
+| Lehrperson | Erwarten ein Spiel für die Schüler*innen, welches selbsterklärend ist und keine weiteren Instruktionen ihrerseits benötigen.
+| Primeo Energie | Erwarten die Fertigstellung eines Austellungsstück bis zum Ende des 2. Schulsemesters 2022/23.
+| Yvonne Zickermann (Kundin) | Als interne Kundin, bietet sie das Bindeglied zwischen Auftraggeber und Projektteam. Hilft bei der Umsetzung des Zieles. 
+| Andrea Kennel (Teamcoach) | Bietet dem Team Unterstützung bei der Umsetzung des Projektes und haltet die fristgerechte Umsetzung im Auge.
+|=============
+

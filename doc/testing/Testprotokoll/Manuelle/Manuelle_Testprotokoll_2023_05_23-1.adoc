@@ -1,0 +1,46 @@
+= Test Documentation: All-Day Stability Test
+:toc: left
+:doctype: book
+:sectnums:
+:icons: font
+:source-highlighter: rouge
+:numbered:
+
+== Test Title and Description
+
+Test Title: All-Day Stability Test
+
+Test Description:
+This test documentation aims to verify the stability and performance of the application running on a Raspberry Pi 4 Model B with connected screen and buttons. The test will run the application continuously for an entire day to ensure that it remains stable without any overheating issues. The temperature of the Raspberry Pi will be monitored to ensure it stays within normal operating values.
+
+== Date and Testers
+
+Date: 2023-05-23
+
+Testers: William Cruz, Nick Koch
+
+== Test Environment
+
+* Hardware: Raspberry Pi 4 Model B
+* Display: Connected screen
+* Buttons: Connected to the Raspberry Pi 4
+* Operating System: Raspbian OS
+
+== Test Steps
+
+1. Ensure that the Raspberry Pi 4 Model B is properly set up with the necessary connections to the display and buttons.
+2. Power on the Raspberry Pi 4 Model B and allow it to boot up.
+3. Start the application on the Raspberry Pi 4 Model B.
+4. Monitor the application and hardware performance throughout the day.
+5. Regularly check the temperature of the Raspberry Pi 4 Model B using a temperature monitoring tool.
+6. Ensure that the temperature of the Raspberry Pi 4 Model B remains within the normal operating range, which is typically between 40°C and 60°C.
+7. Observe the behavior of the application, including responsiveness, screen rendering, and button interaction.
+8. Make note of any issues or abnormalities encountered during the test.
+
+== Test Results
+
+Throughout the entire day, the application remained stable and responsive. The Raspberry Pi 4 Model B maintained a safe temperature range between 40°C and 60°C, which is within normal operating values. The screen rendering was smooth, and the buttons responded correctly to user input. No issues or abnormalities were encountered during the test.
+
+== Conclusion
+
+Based on the All-Day Stability Test, the application demonstrated stable performance without any overheating issues on the Raspberry Pi 4 Model B. The hardware and software components worked together seamlessly, providing a reliable user experience. Regular monitoring of the temperature ensured that the Raspberry Pi 4 Model B operated within normal values. It is recommended to conduct regular stability tests to ensure continued performance and address any potential issues that may arise.

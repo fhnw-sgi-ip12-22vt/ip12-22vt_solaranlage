@@ -1,0 +1,10 @@
+[[section-runtime-view]]
+== Laufzeitsicht
+
+Nachfolgend zeigen wir auf, wie die Laufzeitsicht aussieht, wenn ein Level gestartet wird und was beim ersten Aufruf der Step Methode geschieht in GraphView, wobei hier direkt nach dem ersten durchlauf der Graph wieder gestoppt wird:
+
+image::Sequenzdiagramm.PNG["Sequenzdiagramm"]
+
+Anhand des Sequenzdiagramms, sieht man das viele Klassen beteiligt sind während eines Durchlaufs der TimeLine auf der GraphView. Dabei werden Gerätedaten und Solarproduktionsdaten geholt, bzw aktualisiert. Dieser Vorgang wird iterativ durchgeführt, bis der Tag beendet ist oder der Spieler selbst das Spiel pausiert oder beendet.
+
+Auch wird nach jedem Durchlauf der Highscore berechnet, dieser wird aus der Differenz des produzierten Solarstroms und dem Verbrauch der Geräte berechnet.

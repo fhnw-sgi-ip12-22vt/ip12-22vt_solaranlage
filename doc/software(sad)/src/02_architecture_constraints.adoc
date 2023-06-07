@@ -1,0 +1,11 @@
+[[section-architecture-constraints]]
+== Randbedingungen
+
+[options="header"]
+|=============
+| Randbedingung  | Erläuterung 
+| Technische Rahmenbedingungen | Dies sind Rahmenbedingungen für IP12, welche durch die Fachcoaches definiert wurden. Bei Bedarf kann es Abweichungen geben, welche zuvor mit den Fachcoaches definiert werden. Zu finden unter: https://www.cs.technik.fhnw.ch/confluence20/display/IP1222vt/IP12+-+Technische+Rahmenbedingungen. 
+| Allgemeine Anforderungen an die Projekte | Weitere Rahmenbedingungen der Coaches. Neben mehreren Physischen Bedingungen gibt es auch Software Bedingungen, wie dass das Spiel auch ohne Internet laufen soll. Zu finden unter: https://www.cs.technik.fhnw.ch/confluence20/display/IP1222vt/Allgemeine+Anforderungen+an+die+Projekte
+| Source Code Qualität | Bedingungen zur Qualität des Codes. Beschreibt wie der Code korrekt geschrieben werden soll. Zu finden unter: https://www.cs.technik.fhnw.ch/confluence20/pages/viewpage.action?pageId=73105864
+| Kundenwunsch | Der Kunde hat gewisse Vorstellungen des Projektes, woraus Einschränkungen folgen. Genauer ist die definiert bei Einschränkungen, unter der Produktvision: https://www.cs.technik.fhnw.ch/confluence20/display/VT122205/Produktvision
+|=============

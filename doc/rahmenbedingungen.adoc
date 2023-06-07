@@ -1,0 +1,80 @@
+= Rahmenbedingungen für den Solar Simulator
+
+Die Rahmenbedingungen des Solarsimulators beschreiben die Anforderungen an Hardware, Software, Umgebung und Wartung, um eine zuverlässige Funktionsweise des Produkts sicherzustellen.
+
+== Hardware-Anforderungen
+
+Das Produkt ist für die Verwendung auf bestimmten Hardwarekonfigurationen optimiert und getestet worden.
+Die Zuverlässigkeit des Produkts kann gewährleistet werden, solange die empfohlenen Hardwareanforderungen erfüllt sind.
+Das bedeutet zum Beispiel, dass das Produkt auf folgender Hardware getestet wurde:
+
+- Raspberry Pi 4 Model B mit Raspbian OS
+- Stabile Holzoberfläche mit einem künstlichen Grasbelag
+- Spezifisches Holzmaterial: Oecoplan Sperrholz Pappel 10mm
+
+== Software-Anforderungen
+
+Die Softwareanforderungen für das Produkt müssen erfüllt sein, um eine zuverlässige Funktionsweise sicherzustellen.
+Dazu gehört die Verwendung von unterstützten Betriebssystemen und die Installation der erforderlichen Softwarebibliotheken und -komponenten.
+Es wird empfohlen, die aktuellste Version der unterstützten Softwarekomponenten zu verwenden.
+
+- Betriebssystem: Raspbian OS
+- Installierte Softwarebibliotheken und -komponenten gemäß den Installationsanweisungen des Produkts link:https://ip12-22vt.pages.fhnw.ch/ip12-22vt_solaranlage/solaranlage_prod/dependencies.html[Project Dependencies]
+
+== Umgebungsbedingungen
+
+Das Produkt wurde für den Einsatz unter bestimmten Umgebungsbedingungen entwickelt.
+Um eine optimale Funktionalität und Zuverlässigkeit sicherzustellen, sollten die folgenden Umgebungsbedingungen berücksichtigt werden:
+
+- Unterlage: Das Produkt ist auf einer stabilen Oecoplan Sperrholz Pappel 10mm Holzoberfläche mit einem künstlichen Grasbelag platziert.
+Es ist wichtig, beim Umgang mit dem Produkt Vorsicht walten zu lassen, um Beschädigungen des künstlichen Grasbelags zu vermeiden.
+Bitte beachten Sie die folgenden Pflegehinweise für das Holz und den künstlichen Grassbelag:
+- Holzpflege: Stellen Sie sicher, dass das Holz regelmäßig gereinigt und gepflegt wird, um seine Langlebigkeit und Funktionalität zu erhalten.
+Vermeiden Sie den Kontakt mit Feuchtigkeit und verwenden Sie geeignete Reinigungsprodukte.
+- Grasbelagpflege: Der künstliche Grasbelag sollte regelmäßig von Schmutz und Staub befreit werden.
+Verwenden Sie dazu einen Staubsauger oder eine weiche Bürste.
+Vermeiden Sie den Einsatz von scharfen Reinigungsmitteln oder aggressiven Chemikalien, da diese den Grasbelag beschädigen könnten.
+
+- Bildschirm: Der Bildschirm des Produkts sollte vor direkter Sonneneinstrahlung geschützt werden, um eine optimale Sichtbarkeit und Lesbarkeit zu gewährleisten.
+Vermeiden Sie auch das Aufstellen des Produkts in Umgebungen mit starkem Staub oder Schmutz, um eine Beeinträchtigung der Bildschirmfunktionalität zu vermeiden.
+
+- Raspberry Pi: Der Raspberry Pi, der im Produkt verwendet wird, kann empfindlich auf extreme Temperaturen reagieren.
+Stellen Sie sicher, dass das Produkt in einer Umgebung betrieben wird, die den empfohlenen Betriebstemperaturen für den Raspberry Pi entspricht, um eine optimale Leistung zu gewährleisten und Überhitzung zu vermeiden.
+
+- Sensible Knöpfe: Die Knöpfe des Produkts sind empfindlich und sollten daher vor starkem Druck oder rauer Behandlung geschützt werden.
+Vermeiden Sie das Eindringen von Flüssigkeiten oder Schmutz in die Knopffunktion, um eine korrekte Erkennung und Ausführung der Aktionen sicherzustellen.
+
+Bitte beachten Sie diese Umgebungsbedingungen, um eine optimale Nutzung des Solarsimulators zu gewährleisten und die Lebensdauer des Produkts zu verlängern.
+
+== Holzpflegehinweise
+
+Um die Lebensdauer und Schönheit des Oecoplan Sperrholz Pappel 10mm, das in diesem Produkt verwendet wird, zu erhalten, ist eine regelmäßige und richtige Pflege wichtig.
+
+1. Reinigung: Staub und Schmutz sollten regelmäßig mit einem trockenen, weichen Tuch entfernt werden.
+Bei stärkerer Verschmutzung kann ein leicht feuchtes Tuch verwendet werden, wobei darauf geachtet werden sollte, dass das Holz schnell trocknet, um Feuchtigkeitsschäden zu vermeiden.
+
+2. Pflege: Ein geeignetes Pflegeprodukt kann auf das Holz aufgetragen werden, um es zu nähren und vor Austrocknung zu schützen.
+Dies sollte jedoch nur nach Herstellerangaben und in angemessenem Umfang geschehen, um die natürliche Ausstrahlung des Holzes zu bewahren.
+
+3. Schutz: Vermeiden Sie direkte Sonneneinstrahlung und extreme Temperaturen, da diese das Holz austrocknen und verformen können.
+Stellen Sie das Produkt auch nicht in der Nähe von Heizquellen auf, da diese ebenfalls das Holz schädigen können.
+
+Durch eine regelmäßige und korrekte Pflege kann das Oecoplan Sperrholz Pappel 10mm viele Jahre halten und seine Schönheit und Funktionalität beibehalten.
+
+== Regelmäßige Wartung und Updates
+
+Eine der wichtigsten Aspekte zur Aufrechterhaltung der Zuverlässigkeit und Leistung des Solar Simulators ist die regelmäßige Wartung und Aktualisierung der Software.
+Es ist entscheidend, dass alle installierten Softwarekomponenten und -bibliotheken auf dem neuesten Stand gehalten werden, um die optimale Funktionalität des Geräts zu gewährleisten.
+
+Um sicherzustellen, dass Sie über die neuesten Updates und Verfahren zur Aufrechterhaltung Ihres Solar Simulators informiert sind, sollten Sie regelmäßig die README-Datei unseres Projekts auf GitLab überprüfen.
+In dieser Datei finden Sie detaillierte Anweisungen zum Starten und Aktualisieren der Raspberry Pi 4 sowie zu anderen wichtigen Wartungs- und Aktualisierungsaufgaben.
+
+Sie können die README-Datei unseres Projekts hier finden: link:https://gitlab.fhnw.ch/ip12-22vt/ip12-22vt_solaranlage/solaranlage_prod/-/blob/main/README.md[README.md]
+
+Durch regelmäßiges Lesen der README-Datei und Durchführen der dort aufgeführten Wartungs- und Aktualisierungsaufgaben können Sie dazu beitragen, dass Ihr Solar Simulator lange Zeit zuverlässig funktioniert.
+
+== Fazit
+
+Der Solar Simulator funktioniert zuverlässig, solange die oben genannten Rahmenbedingungen erfüllt sind.
+Es ist wichtig, sicherzustellen, dass die empfohlene Hardware vorhanden ist, die Softwareanforderungen erfüllt sind und das Produkt unter den angegebenen Umgebungsbedingungen betrieben wird.
+Die regelmäßige Wartung und Installation von Updates trägt zur langfristigen Zuverlässigkeit und Leistung des Produkts bei.

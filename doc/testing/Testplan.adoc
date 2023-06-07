@@ -1,0 +1,66 @@
+= Testplan für den Solarstromsimulator
+:toc: left
+:doctype: book
+:sectnums:
+:icons: font
+:source-highlighter: rouge
+:numbered:
+
+== Einführung
+
+Dieser Testplan beschreibt die Teststrategie, den Umfang und die geplanten Testaktivitäten für den Solarstromsimulator.
+Das Hauptziel der Tests ist es, sicherzustellen, dass die Anwendung korrekt funktioniert und den Anforderungen, der Produktvision und den allgemeinen Source-Code-Qualitätsanforderungen entspricht.
+Der Testplan enthält Informationen über die Testumgebung, die Testphasen, die Testaktivitäten und die Testlieferungen.
+
+== Testziele
+
+* Sicherstellen, dass die Anwendung gemäß den Anforderungen und der Produktvision funktioniert.
+* Überprüfung der Codequalität und Einhaltung der allgemeinen Source-Code-Qualitätsanforderungen.
+* Validierung der Benutzerfreundlichkeit, Zugänglichkeit und Barrierefreiheit der Anwendung.
+* Sicherstellung der Anwendungsstabilität, Fehlerbehandlung und Kompatibilität auf verschiedenen Plattformen, einschließlich Raspberry Pi 4 Model B.
+
+== Testumgebung
+
+Die Testumgebung besteht aus einer lokalen Java-Entwicklungsumgebung mit den erforderlichen Tools und Frameworks, wie z.B. JDK, Maven, JUnit, JavaFX, Checkstyle, etc.
+Die Anwendung wird auf verschiedenen Betriebssystemen und Geräten getestet, einschließlich Raspberry Pi 4 Model B, um die Kompatibilität sicherzustellen.
+
+== Testphasen
+
+Die Tests werden in drei Hauptphasen unterteilt:
+
+1. **Einheitstests**: Überprüfung der Funktionalität und Korrektheit einzelner Codeeinheiten (Klassen und Methoden) durch automatisierte Tests mit JUnit Jupiter.
+
+2. **System- und Integrationstests**: Manuelle und automatisierte Tests der gesamten Anwendung, um sicherzustellen, dass alle Komponenten korrekt zusammenarbeiten und die Anwendung als Ganzes funktioniert.
+
+3. **Nicht-funktionale Tests**: Überprüfung der Benutzerfreundlichkeit, Zugänglichkeit, Barrierefreiheit, Skalierbarkeit, Modularität, Sicherheit und Datenschutz der Anwendung.
+
+== Testaktivitäten
+
+Die Testaktivitäten umfassen manuelle Tests, automatisierte Tests, JUnit-Tests und statische Code-Analyse.
+Die Testaktivitäten werden in den folgenden separaten Dokumenten beschrieben:
+
+* link:Manuelle_Testdokumentation.adoc[Manuelle Testdokumentation]
+* link:Automatisierte_Testdokumentation.adoc[Automatisierte Testdokumentation]
+* link:JUnit_Testdokumentation.adoc[JUnit-Testdokumentation]
+* link:Statische_Code_Analyse.adoc[Statische Code-Analyse]
+
+== Testlieferungen
+
+Die Testlieferungen umfassen Testfälle, Testdaten, Testskripte, Testergebnisse und Fehlerberichte.
+Diese Informationen werden in den oben genannten Dokumenten für manuelle Tests, automatisierte Tests, JUnit-Tests und statische Code-Analyse bereitgestellt.
+
+== Anforderungen an die Source Code Qualität
+
+Bitte beachten Sie die link:../coding_conventions.adoc[allgemeinen Source Code Qualität Anforderungen] für weitere Informationen über die Erwartungen an den Code.
+
+== Testplan-Anhang
+
+Anhang A: link:Manuelle_Testdokumentation.adoc[Manuelle Testdokumentation]
+Anhang B: link:Automatisierte_Testdokumentation.adoc[Automatisierte Testdokumentation]
+Anhang C: link:JUnit_Testdokumentation.adoc[JUnit-Testdokumentation]
+Anhang D: link:Statische_Code_Analyse.adoc[Statische Code-Analyse]
+Anhang E: link:Source_Code_Qualität_Anforderungen.adoc[Source Code Qualität Anforderungen]
+Anhang F: link:../rahmenbedingungen.adoc[Rahmenbedingungen des Solarsimulators]
+
+Der Anhang F enthält die Rahmenbedingungen für den Solar Simulator, die Informationen über die Hardware- und Softwareanforderungen, die Umgebungsbedingungen und die regelmäßige Wartung und Updates des Produkts bereitstellen.
+Bitte beachten Sie diese Informationen für weitere Details.

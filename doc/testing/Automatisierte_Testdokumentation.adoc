@@ -1,0 +1,110 @@
+= Automatisierte Testdokumentation
+:toc: left
+:doctype: book
+:sectnums:
+:icons: font
+:source-highlighter: rouge
+:numbered:
+
+== Einführung
+
+Diese Dokumentation beschreibt die automatisierten Tests für den Solarstromsimulator, der mit Maven entwickelt wurde und in eine CI/CD-Pipeline integriert ist.
+Das Ziel der automatisierten Tests ist es, die Qualität des Codes und die Funktionalität des Solarstromsimulators sicherzustellen.
+Die Tests werden automatisch ausgeführt, um mögliche Fehler frühzeitig zu erkennen und die Entwicklungseffizienz zu steigern.
+Die automatisierten Tests ergänzen die manuellen Tests, die in der Manuelle_Testdokumentation.adoc beschrieben sind.
+
+== Testfallkategorien
+
+Die automatisierten Testfälle sind in die folgenden Kategorien unterteilt:
+
+1. Einheitstests (JUnit)
+2. Integrationstests
+3. Systemtests
+
+== Testfälle
+
+=== Einheitstests (JUnit)
+
+Die Einheitstests werden mit dem JUnit-Framework durchgeführt.
+Dabei werden einzelne Funktionen und Methoden des Simulators isoliert getestet, um sicherzustellen, dass sie korrekt funktionieren.
+Die Einheitstests überprüfen das Verhalten einzelner Komponenten des Simulators und stellen sicher, dass sie gemäß den Anforderungen arbeiten.
+Die Einheitstests sollten eine hohe Testabdeckung des Codes erreichen, um potenzielle Fehlerquellen zu identifizieren.
+
+=== Integrationstests
+
+Integrationstests überprüfen die Zusammenarbeit zwischen verschiedenen Komponenten des Simulators.
+Dabei wird getestet, ob die Schnittstellen zwischen den Komponenten korrekt funktionieren und die Daten korrekt übertragen werden.
+Integrationstests können manuell oder automatisiert durchgeführt werden, je nach Komplexität und Umfang der Integration.
+Die Integrationstests sollten sicherstellen, dass die Komponenten des Simulators ordnungsgemäß zusammenarbeiten und die erwarteten Ergebnisse liefern.
+
+=== Systemtests
+
+Systemtests überprüfen das gesamte System, um sicherzustellen, dass es den Anforderungen entspricht und als Ganzes korrekt funktioniert.
+Diese Tests simulieren reale Benutzerszenarien und überprüfen die End-to-End-Funktionalität des Simulators.
+Die Systemtests können sowohl manuell als auch automatisiert durchgeführt werden.
+Automatisierte Systemtests können beispielsweise mit Tools wie Selenium durchgeführt werden, die die Benutzeroberfläche des Simulators automatisch steuern und testen.
+Die Systemtests sollten sicherstellen, dass der Simulator in seiner Gesamtheit korrekt funktioniert und den erwarteten Anforderungen entspricht.
+
+== Statische Code-Analyse
+
+Eine statische Code-Analyse hilft dabei, potenzielle Probleme im Code zu erkennen, bevor sie zu Fehlern im laufenden System führen.
+Die statische Code-Analyse kann mit Tools wie SonarQube oder Checkstyle durchgeführt werden.
+Diese Tools prüfen den Code auf Code-Standards, Codierungsfehler, Sicherheitslücken und andere potenzielle Probleme.
+Die statische Code-Analyse sollte regelmäßig durchgeführt werden, um sicherzustellen, dass der Code qualitativ hochwertig und fehlerfrei ist.
+
+== Testabdeckung
+
+Um die Qualität der Tests zu gewährleisten, ist es wichtig, die Testabdeckung zu überprüfen.
+Die Testabdeckung gibt an, welcher Anteil des Codes durch die Tests abgedeckt wird.
+Eine hohe Testabdeckung ist ein Indikator für gut getesteten Code und ermöglicht es, potenzielle Fehlerquellen zu identifizieren.
+Tools wie JaCoCo oder Cobertura können verwendet werden, um die Testabdeckung zu messen und zu visualisieren.
+Die Testabdeckung sollte regelmäßig überprüft werden, um sicherzustellen, dass alle wichtigen Teile des Codes getestet werden.
+
+== Testausführung und Berichterstattung
+
+Die automatisierten Tests sollten regelmäßig in der CI/CD-Pipeline ausgeführt werden, um sicherzustellen, dass Änderungen am Code keine unerwarteten Auswirkungen auf die Funktionalität des Simulators haben.
+Die Testergebnisse sollten in einem Bericht festgehalten und ausgewertet werden.
+Dies ermöglicht es, mögliche Probleme oder Fehler schnell zu erkennen und zu beheben.
+Die Berichterstattung über die Testergebnisse sollte transparent und für das Entwicklungsteam zugänglich sein, um eine effektive Zusammenarbeit und Fehlerbehebung zu ermöglichen.
+
+== Testumgebung
+
+Die automatisierten Tests sollten in einer kontrollierten Testumgebung ausgeführt werden, um reproduzierbare und konsistente Ergebnisse zu gewährleisten.
+Die Testumgebung sollte so konfiguriert sein, dass sie der Produktionsumgebung so ähnlich wie möglich ist.
+Dies umfasst die Verwendung der gleichen Betriebssysteme, Software-Versionen und Hardware-Konfigurationen.
+Es ist wichtig sicherzustellen, dass die Testumgebung stabil und zuverlässig ist, um genaue Testergebnisse zu erhalten.
+
+== Testplanung und -priorisierung
+
+Die Testplanung und -priorisierung ist ein wesentlicher Bestandteil der automatisierten Tests.
+Es ist wichtig, die Testfälle sorgfältig auszuwählen und zu priorisieren, um die wichtigsten Funktionen des Simulators abzudecken und mögliche Schwachstellen zu identifizieren.
+Bei der Planung der Tests sollten folgende Aspekte berücksichtigt werden:
+
+- Risikobewertung: Identifizieren Sie die kritischen Funktionen des Simulators und die Bereiche, in denen Fehler schwerwiegende Auswirkungen haben könnten.
+Diese Bereiche sollten priorisiert werden.
+- Ressourcen: Stellen Sie sicher, dass ausreichend Ressourcen für die Durchführung der automatisierten Tests zur Verfügung stehen, einschließlich Testhardware, Software und Personal.
+- Zeitplan: Erstellen Sie einen Testplan, der die Reihenfolge und den Zeitpunkt der Testausführung festlegt.
+Berücksichtigen Sie dabei auch den Entwicklungszyklus und die Verfügbarkeit von Ressourcen.
+- Testwartung: Planen Sie die regelmäßige Überprüfung und Aktualisierung der Testfälle, um sicherzustellen, dass sie weiterhin relevant und effektiv sind.
+
+== Testwerkzeuge
+
+Für die Durchführung der automatisierten Tests werden verschiedene Testwerkzeuge benötigt.
+Einige der in den bisherigen Tests verwendeten Werkzeuge sind:
+
+* Apache Maven: Ein Build-Management-Tool für Java-Projekte, das auch die Automatisierung von Tests unterstützt.
+Maven kann verwendet werden, um die Abhängigkeiten für die Tests zu verwalten, Testausführungsprofile zu konfigurieren und die Testberichte zu generieren.
+* JUnit: Ein Framework für die Durchführung von Einheitstests in Java-Anwendungen
+* GitLab CI/CD: Eine CI/CD-Plattform, die in GitLab integriert ist und automatisierte Builds, Tests und Bereitstellungen ermöglicht.
+GitLab CI/CD kann konfiguriert werden, um die automatisierten Tests auszuführen, sobald Änderungen im Code vorgenommen wurden, und Berichte über die Testergebnisse zu generieren.
+* Docker: Eine Containerisierungsplattform, die es ermöglicht, Anwendungen in isolierten Containern auszuführen.
+Docker kann verwendet werden, um die Testumgebung zu erstellen und zu verwalten, indem verschiedene Komponenten des Simulators in Containern bereitgestellt werden.
+Dies erleichtert die Reproduzierbarkeit und Konsistenz der Tests.
+
+Bei der Auswahl der Testwerkzeuge sollten die Anforderungen des Projekts, die Ressourcen und die Kompetenzen des Testteams berücksichtigt werden.
+
+== Fazit
+
+Die Automatisierte_Testdokumentation.adoc beschreibt die verschiedenen Aspekte der automatisierten Tests für den Simulator.
+Durch die Kombination von automatisierten Tests mit manuellen Tests und statischer Code-Analyse kann die Qualität und Zuverlässigkeit des Simulators sichergestellt werden.
+Eine kontinuierliche Verbesserung der Testverfahren und die regelmäßige Überprüfung der Testergebnisse tragen dazu bei, mögliche Schwachstellen zu identifizieren und die Leistung des Simulators zu optimieren.

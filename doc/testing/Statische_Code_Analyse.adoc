@@ -1,0 +1,55 @@
+= Statische Code-Analyse
+:toc: left
+:doctype: book
+:sectnums:
+:icons: font
+:source-highlighter: rouge
+:numbered:
+
+== Einführung
+
+Die Statische Code-Analyse ist ein wichtiger Bestandteil des Softwareentwicklungsprozesses.
+Sie hilft Entwicklern dabei, Code-Qualitätsprobleme frühzeitig zu erkennen und zu beheben.
+In diesem Dokument werden die Schritte zur Durchführung der statischen Code-Analyse für das Solarstromsimulator-Projekt beschrieben.
+
+== Werkzeuge
+
+Für die statische Code-Analyse werden folgende Werkzeuge verwendet:
+
+* Checkstyle: Ein Werkzeug zur Überprüfung der Einhaltung von Java-Codierungsstandards und Best Practices.
+* PMD: Ein Werkzeug zur Erkennung von möglichen Problemen im Java-Code, wie z. B. ungenutzten Variablen, leeren Catch-Blöcken und potenziellen Nullpointer-Ausnahmen.
+* FindBugs: Ein Werkzeug zur Identifizierung von potenziellen Bugs im Java-Code auf der Grundlage von Bytecode-Analyse.
+
+== Analyseprozess
+
+1. Einrichtung der Werkzeuge: Installieren und konfigurieren Sie die oben genannten Werkzeuge gemäß den Anweisungen in ihren jeweiligen Dokumentationen.
+2. Ausführung der Analyse: Führen Sie die Werkzeuge auf dem gesamten Codebase des Simulator-Projekts aus.
+3. Überprüfung der Ergebnisse: Untersuchen Sie die Ergebnisse der Analyse und identifizieren Sie Bereiche, die Verbesserungen oder Korrekturen erfordern.
+4. Behebung von Problemen: Beheben Sie die identifizierten Probleme im Code und führen Sie die Analyse erneut aus, um sicherzustellen, dass alle Probleme behoben wurden.
+5. Integration in den Entwicklungsprozess: Integrieren Sie die statische Code-Analyse in den Entwicklungsprozess, um kontinuierlich die Code-Qualität zu überwachen und zu verbessern.
+
+== Best Practices
+
+Um die Vorteile der statischen Code-Analyse optimal zu nutzen, sollten die folgenden Best Practices befolgt werden:
+
+1. Anpassung der Regeln: Passen Sie die Regeln der Werkzeuge an die spezifischen Anforderungen Ihres Projekts und Ihrer Organisation an.
+2. Automatisierung: Automatisieren Sie die statische Code-Analyse, indem Sie sie in Ihren Build-Prozess und/oder Ihre Continuous Integration (CI) Pipeline integrieren.
+3. Regelmäßige Überprüfung: Führen Sie die statische Code-Analyse regelmäßig durch, um kontinuierlich über die Code-Qualität informiert zu sein und Probleme frühzeitig zu erkennen.
+4. Schulung der Entwickler: Schulen Sie Ihre Entwickler in den Best Practices der statischen Code-Analyse und fördern Sie eine Kultur der Code-Qualität innerhalb Ihres Teams.
+
+== Referenzen
+
+* [Checkstyle](https://checkstyle.sourceforge.io/)
+* [PMD](https://pmd.github.io/)
+* [FindBugs](http://findbugs.sourceforge.net/)
+* link:JUnit_Testdokumentation.adoc[JUnit Testdokumentation]
+* link:Manuelle_Testdokumentation.adoc[Manuelle Testdokumentation]
+
+== Zusammenfassung
+
+Die statische Code-Analyse ist ein effektives Mittel zur Verbesserung der Code-Qualität und zur Vermeidung von Problemen im Entwicklungsprozess.
+Durch die Verwendung von Werkzeugen wie Checkstyle, PMD und FindBugs können potenzielle Probleme im Code identifiziert und behoben werden.
+Die Integration der statischen Code-Analyse in den Entwicklungsprozess und die Befolgung von Best Practices tragen dazu bei, die Qualität des Simulator-Projekts kontinuierlich zu verbessern.
+
+Vergessen Sie nicht, auch die anderen Dokumente in diesem Projekt zu konsultieren, um einen umfassenden Überblick über die verschiedenen Aspekte des Testens und der Qualitätssicherung zu erhalten.
+Dazu gehören die [JUnit Testdokumentation](link:JUnit_Testdokumentation.adoc[JUnit_Testdokumentation.adoc]) und die [Manuelle Testdokumentation](link:Manuelle_Testdokumentation.adoc[Manuelle_Testdokumentation.adoc]).

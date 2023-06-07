@@ -1,0 +1,26 @@
+[[section-glossary]]
+== Glossar
+
+[cols="e,2e" options="header"]
+|===
+| Begriff | Definition
+
+| Primeo Energie | Ein schweizer Energieversorgungsunternehmen. Ist Aufgtraggeber unseres Projektes
+
+| Raspberry Pi | Ist ein Einplatinencomputer. Darauf läuft das fertige System.
+
+| Solarsimulator | Name unseres Spiels, welches umgesetzt wird.
+
+| Pi4J | Eine Library in Java, womit die Verbindung mit dem Raspberry Pi sichergestellt werden kann.
+
+| JUnit Tests | Ein Framework zum Testen von Java-Programmen, das besonders für automatisierte Unit-Tests einzelner Units geeignet ist.
+
+| Whitebox Elemente | Sind Elemente des Systems, wobei man bei Whitebox, Kenntnisse über den Code und dessen Funktionsweisen hat.
+
+| Blackbox Elemente | Sind Elemente des Systems, wobei man bei Blackbox, sozusagen im Dunkeln tappt. Man weiss nicht wie eine Software funktioniert, wie sie implementiert ist oder aus welchen Komponenten sie besteht. Die Spezifikationen erfolgen anhand aller sichtbaren Komponenten.
+
+| JavaFX | Eine Java Library zur Darstellung von graphischen Oberflächen.
+| StackedAreaChart | Teil der JavaFX Library. Stellt einen Graph dar, welcher mit einer Farbe ausgefüllt ist.
+| SceneBuilder | Der SceneBuilder ist ein grafisches Werkzeug, das zur Erstellung von Benutzeroberflächen für JavaFX-Anwendungen mithilfe der FXML-Sprache verwendet wird.
+
+|===

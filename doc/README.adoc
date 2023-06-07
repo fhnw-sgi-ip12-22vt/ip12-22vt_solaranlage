@@ -1,0 +1,25 @@
+# Produktdokumentation
+
+Willkommen zur Produktdokumentation für Primeo. In diesem Dokument werden Sie detaillierte Informationen zu den verschiedenen Aspekten unseres Projekts finden, einschließlich Softwaredokumentation, Hardwaredokumentation, Testdokumentation und Programmierkonventionen.
+
+## Softwaredokumentation
+
+Unsere Softwaredokumentation wird nach den Vorgaben von arc42 erstellt. Der erste Schritt besteht darin, die System-Idee zu formulieren. Sie können diese Dokumentation für ein umfassendes Verständnis unserer Softwarelösungen durchgehen.
+
+## Hardwaredokumentation
+
+In der Hardwaredokumentation finden Sie alle Informationen, die Sie benötigen, um das Produkt zu bauen. Dazu gehört:
+
+- **Teileliste**: Hier sind alle Teile aufgeführt, die in das Produkt eingebaut wurden. Zusätzlich geben wir an, wie viel jedes Teil gekostet hat und wie es verdrahtet wurde.
+- **Dateien**: Dieser Bereich enthält alle Dateien, die für die Herstellung von physischen Teilen aus Holz (z.B. Laser) oder Plastik (z.B. 3D-Druck) benötigt wurden.
+- **Abmessungen**: Für Elemente, die nicht automatisiert hergestellt wurden, stellen wir die Maße zur Verfügung.
+
+## Testdokumentation
+
+Die Testdokumentation erklärt, wie wir überprüft haben, ob das Produkt den Vorgaben entspricht. Einige Vorgaben können automatisch mit Unit-Tests überprüft werden, andere mit manuellen Tests. Unsere Dokumentation enthält sowohl die automatisierten Unit-Tests als auch die manuellen Testprotokolle.
+
+## Programmierkonventionen (Coding-Conventions)
+
+Die Programmierkonventionen legen fest, wie der Code geschrieben werden soll. Unser Team hat sich an bestehende Coding-Conventions gehalten und Prozesse eingerichtet, um sicherzustellen, dass diese Regeln eingehalten wurden. In dieser Dokumentation finden Sie detaillierte Informationen darüber, wie wir die Einhaltung der Regeln sichergestellt haben.
+
+Für weitere Informationen und Details empfehlen wir, die einzelnen Abschnitte der Dokumentation zu durchsuchen. Wir hoffen, dass diese Dokumentation Ihnen hilft, ein besseres Verständnis unseres Projekts und seiner Funktionen zu erlangen. Sollten Sie weitere Fragen haben, zögern Sie bitte nicht, uns zu kontaktieren.

@@ -1,0 +1,33 @@
+[[section-quality-scenarios]]
+== Qualitätsanforderungen
+
+=== Qualitätsbaum
+
+image::Qualitaetsbaum.png["Qualitätsbaum"]
+
+=== Qualitätsszenarien
+
+[cols="1,9" options="header"]
+|=============
+| ID  | Beschreibung
+| W01 | Die Qualität des Source Codes soll den Vorgaben entsprechen: https://www.cs.technik.fhnw.ch/confluence20/pages/viewpage.action?pageId=73105864
+| W02 | Mit gut strukturiertem Code soll es möglich sein neue Funktionen hinzuzufügen
+| W03 | Es sollen Tests geschrieben werden, um die Hauptfunktionen zu testen und überprüfen
+| B01 | Der Graph, welcher die Stromproduktion und den Stromverbrauch darstellt soll als wichtiges Element dargestellt werden
+| B02 | Der Spieler soll die Grundfunktionen bzw. die Steuerung des Spiels innerhalb von zwei Minuten verstanden haben
+| B03 | Das System soll Spielern mit wenig Vorwissen zu Solarenergie, durch Spielhilfen und bildliche Darstellung, den Einstieg erleichtern
+| E01 | Nach Bestätigungen von Eingaben soll die Ausführung des Prozesses direkt erfolgen. Die Wartezeit für den Spieler soll nicht mehr als fünf Sekunden betragen.
+| E02 | Das System soll auf dem Raspberry Pi vollständig laufen, es werden keine weiteren Ressourcen benötigt.
+| F01 | Das System benötigt kein Login oder spezielle Berechtigungen zum Ausführen
+| F02 | Das Wetter soll während dem Spiel klar ersichtlich sein
+| F03 | Es soll den definierten technischen Rahmenbedingungen entsprechen: https://www.cs.technik.fhnw.ch/confluence20/display/IP1222vt/IP12+-+Technische+Rahmenbedingungen
+| F04 | Bei möglichen Fehlern, soll eine detaillierte Fehlermeldung ausgegeben werden
+| F05 | Vor der Fertigstellung sollen mehrere Szenarien durchgespielt sein, welche einwandfrei funktionierten
+| F06 | Es werden mehrere Tests mit Testbenutzern zuvor durchgeführt
+| U01 | Das System soll Lokal laufen und benötigt keine Internetverbindung
+| U02 | Das System soll vorinstalliert und verfügbar auf dem Raspberry Pi laufen
+| Z01 | Unser System soll robust genug sein, dass es nicht zu Abnutzungen kommt innerhalb eines Jahres, ab dem Zeitpunkt wo es produktiv benutzt wird
+| Z02 | Das System soll die allgemeinen Anforderungen erfüllen: https://www.cs.technik.fhnw.ch/confluence20/display/IP1222vt/Allgemeine+Anforderungen+an+die+Projekte
+| Z03 | Sollte es technische Schäden geben beim Raspberry Pi, soll es möglich sein, das Gerät auszutauschen   
+|=============
+

@@ -1,0 +1,185 @@
+= JUnit Testdokumentation
+:toc: left
+:doctype: book
+:sectnums:
+:icons: font
+:source-highlighter: rouge
+:numbered:
+
+== Einführung
+
+Die folgende Dokumentation beschreibt die JUnit-Tests für den Solarstromsimulator.
+Ziel ist es, die Funktionalität des Solarstromsimulators in verschiedenen Szenarien zu testen, um sicherzustellen, dass er den Anforderungen entspricht und fehlerfrei funktioniert.
+Die JUnit-Tests konzentrieren sich auf die automatisierte Überprüfung der einzelnen Komponenten und Funktionen des Simulators.
+
+== Testumgebung
+
+Die JUnit-Tests wurden in folgenden Umgebungen durchgeführt:
+
+- MacBook Pro (Retina, 15-inch, Mid 2015), 2.2 GHz Quad-Core Intel Core i7
+- Raspbian OS (Raspberry Pi)
+
+== Testfallkategorien
+
+Die Testfälle sind in die folgenden Kategorien unterteilt:
+
+1. Funktionalität
+2. Benutzerfreundlichkeit
+3. Leistung
+
+== Testfälle
+
+=== Funktionalität
+
+[cols="2,5,5",options="header"]
+|===
+|ID
+|Testfall
+|Beschreibung
+
+|F01
+|Start
+|Überprüfung, ob der Simulator ordnungsgemäß gestartet wird und alle Elemente der Benutzeroberfläche korrekt geladen werden.
+
+|F02
+|Stopp
+|Überprüfung, ob der Simulator ordnungsgemäß heruntergefahren wird, alle Ressourcen freigegeben und der Zustand der Anwendung korrekt gespeichert wird.
+
+|F03
+|Taskerfüllung
+|Überprüfung, ob eine Aufgabe als erfüllt markiert wird, die Aufgabenliste aktualisiert wird und die erfüllte Aufgabe in der Historie der erfüllten Aufgaben erscheint.
+
+|F04
+|Erkennung von Buttons
+|Überprüfung, ob die Aktionen der Buttons korrekt erkannt werden, die entsprechenden Funktionen in der Anwendung ausgelöst werden und die Benutzeroberfläche entsprechend aktualisiert wird.
+
+|===
+
+=== Benutzerfreundlichkeit
+
+[cols="2,5,5",options="header"]
+|===
+|ID
+|Testfall
+|Beschreibung
+
+|U01
+|Bedienung der Benutzeroberfläche
+|Überprüfung der Intuitivität und Benutzerfreundlichkeit aller Elemente der Benutzeroberfläche, wie Menüs, Schaltflächen und Eingabefelder.
+
+|U02
+|Reaktionszeit der Anwendung
+|Überprüfung der Reaktionszeit der Anwendung bei verschiedenen Aktionen, wie dem Starten der Simulation, dem Wechseln von Menüs und dem Aktualisieren von Anzeigen.
+
+|===
+
+=== Leistung
+
+[cols="2,5,5",options="header"]
+|===
+|ID
+|Testfall
+|Beschreibung
+
+|P01
+|Lasttest
+|Überprüfung des Simulators unter hoher Last, um sicherzustellen, dass er auch bei vielen gleichzeitigen Benutzern stabil und zuverlässig funktioniert. Dabei werden die Reaktionszeiten der Anwendung und die Ressourcennutzung überwacht.
+
+|P02
+|Stresstest
+|Überprüfung des Simulators unter extremen Bedingungen, um sicherzustellen, dass er stabil und zuverlässig funktioniert. Dabei werden die Grenzen der Anwendung ausgelotet und mögliche Schwachstellen identifiziert.
+
+|===
+
+== Testprotokoll
+
+Das Testprotokoll dokumentiert die Ergebnisse der JUnit-Tests für den Solarstromsimulator.
+Für jeden Testfall werden die folgenden Informationen festgehalten:
+
+1. Testfall-ID
+2. Datum der Durchführung
+3. Tester (Name oder Benutzername)
+4. Testergebnis (erfolgreich/nicht erfolgreich)
+5. Bemerkungen (z. B. aufgetretene Probleme oder Verbesserungsvorschläge)
+
+=== Funktionalität
+
+[cols="2,4,4,4",options="header"]
+|===
+|Testfall-ID
+|Datum
+|Tester
+|Testergebnis
+
+|F01
+|2023-05-21
+|William Cruz
+|Erfolgreich
+
+|F02
+|2023-05-21
+|William Cruz
+|Erfolgreich
+
+|F03
+|2023-05-21
+|William Cruz
+|Erfolgreich
+
+|F04
+|2023-05-21
+|William Cruz
+|Erfolgreich
+
+|===
+
+=== Benutzerfreundlichkeit
+
+[cols="2,4,4,4",options="header"]
+|===
+|Testfall-ID
+|Datum
+|Tester
+|Testergebnis
+
+|U01
+|2023-05-21
+|William Cruz
+|Erfolgreich
+
+|U02
+|2023-05-21
+|William Cruz
+|Erfolgreich
+
+|===
+
+=== Leistung
+
+[cols="2,4,4,4",options="header"]
+|===
+|Testfall-ID
+|Datum
+|Tester
+|Testergebnis
+
+|P01
+|2023-05-21
+|William Cruz
+|Erfolgreich
+
+|P02
+|2023-05-21
+|William Cruz
+|Erfolgreich
+
+|===
+
+Das Testprotokoll für die JUnit-Tests des Solarstromsimulators wurde erfolgreich erstellt und enthält die Ergebnisse der durchgeführten Tests. Es dient als Referenz zur Überprüfung der Funktionalität, Benutzerfreundlichkeit und Leistung des Simulators. Etwaige Probleme oder Verbesserungsvorschläge können in den Bemerkungen festgehalten werden, um eine kontinuierliche Qualitätsverbesserung zu ermöglichen.
+
+=== Testprotokoll Referenzen
+
+1. link:Testprotokoll/JUnit/JUnit_Testprotokoll_DeviceLevelModel.adoc[JUnit DeviceLevelModel 2023-05-21]
+2. link:Testprotokoll/JUnit/JUnit_Testprotokoll_LevelModel.adoc[JUnit LevelModel 2023-05-21]
+3. link:Testprotokoll/JUnit/JUnit_Testprotokoll_PreScoreModel.adoc[JUnit PreScoreModel 2023-05-21]
+4. link:Testprotokoll/JUnit/JUnit_Testprotokoll_Time.adoc[JUnit Time 2023-05-21]

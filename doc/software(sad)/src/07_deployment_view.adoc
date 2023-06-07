@@ -1,0 +1,50 @@
+[[section-deployment-view]]
+== Verteilungssicht
+
+=== Deployment
+Das Deployment-Paket für das Projekt umfasst die folgenden Komponenten:
+
+*Solarsimulator* 
+
+Der Solarstromsimulator ist ein interaktives Lernspiel, das den Einsatz verschiedener privater Elektrogeräte simuliert und deren Verbrauch auf die Stromproduktion einer privaten Photovoltaikanlage optimiert. Dabei berücksichtigt das Spiel realistische Stromkonsumbedürfnisse eines Privathaushalts. Das Spiel bietet den Nutzerinnen und Nutzern die Möglichkeit, ihr Wissen über Energiewende, Photovoltaikanlagen und den Einfluss von Elektrogeräten auf Energieverbrauch und -produktion spielerisch zu erweitern.
+
+*JavaFX* 
+
+JavaFX ist ein Java-Framework für die Entwicklung von plattformübergreifenden, reichhaltigen Benutzeroberflächen. Es wird für die Benutzeroberfläche des Solarsimulators verwendet.
+
+*Maven*
+
+Maven ist ein Build-Management-Tool für Java-Projekte. Es wird verwendet, um das Projekt zu bauen und zu verwalten.
+
+*Um das Projekt zu installieren und auszuführen, müssen die folgenden Schritte ausgeführt werden*
+
+* Klonen Sie das Repository auf Ihren lokalen Computer:
+** git clone https://ip12-22vt.pages.fhnw.ch/ip12-22vt_solaranlage/solaranlage_prod.git
+* Öffnen Sie das Projekt in Ihrer bevorzugten Java-IDE.
+* Bauen und starten Sie das Projekt mit den bereitgestellten Maven-Skripten.
+** mvn clean package
+** mvn site
+** mvn javafx:run
+** java -jar target/simulator-22.2-SNAPSHOT.jar
+* mvn clean package mvn site mvn javafx:run java -jar target/simulator-22.2-SNAPSHOT.jar
+
+=== Physische Voraussetzungen für Deployment
+
+[options="header"]
+|=============
+| Komponente  | Beschreibung 
+| Raspberry Pi | Auf dem Raspberry Pi läuft das Spiel. Er ist mit den Buttons und dem Bildschirm verbunden, für die Interaktion
+| Buttons (inklusive 3D Geräte) | Sind an den jeweiligen PINs angeschlossen, die PIN Nummer wird in den Properties festgelegt.
+| Bildschirm | Stellt das Spiel als JavaFX Applikation dar.
+| Verkabelung | Neben mehreren Kabeln, welche die Buttons miteinander verbinden, gibt es auch ein Stromkabel, das benötigt wird um das Gerät zum laufen zu bringen. Dies ist ein gewöhnliches Netzkabel
+|=============
+
+=== Verwendete Softwareversionen
+
+[options="header"]
+|=============
+| Komponente  | Beschreibung 
+| Java 17 Zulu | Unser Projekt wurde mit Java 17 erstellt. Genauer genommen mit der Version von Zulu. Diese enthält die JavaFX Library von Haus aus.
+| Restliche Dependencies (wie Maven) | Die restlichen Versionsangaben, sind im pom.xml gespeichert.
+|=============
+

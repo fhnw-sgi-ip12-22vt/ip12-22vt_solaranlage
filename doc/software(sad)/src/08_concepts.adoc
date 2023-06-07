@@ -1,0 +1,75 @@
+[[section-concepts]]
+== Querschnittliche Konzepte
+
+=== Spiellogik
+
+Das Spiel besteht aus einem bestimmten Tag der simuliert wird von früh bis spät abends. Je nach Level kann dies ein Sommer Tag, ein Winter Tag oder ein wechselhafter Tag sein. Während des Tages, wird Strom von der Solaranlage produziert.
+
+Währenddessen kann man Geräte anschalten und/oder ausschalten, dabei gibt es drei unterschiedliche Gerätetypen:
+
+* Geräte, welche dauerhaft laufen (Bsp. Kühlschrank)
+* Geräte, welche für eine vorgegebene Zeit laufen (Bsp. Waschmaschine)
+* Geräte, welche beliebig lang laufen (Bsp. Fernseher)
+
+Nun müssen die Geräte zu einer sinnvollen Zeit angeschaltet werden, damit möglichst viele Punkte gesammelt werden kann (siehe Punkteberechnung). Da es am meisten Punkte geben würde, wenn kein Gerät angeschaltet wird, gibt es Geräteziele, welche am rechten Rand dargestellt sind.
+
+image::AusschnittSpiel.PNG["Spiel Darstellung"]
+
+Wenn eines dieser Ziele nicht erreicht wird, gibt dies am Ende 500 Minuspunkte zum Score abgezogen. Mit diesen Vorgaben kann ein Spieldurchlauf erfolgreich gespielt werden.
+
+=== Datenbeschaffung
+
+Die Daten, wie viel Strom die Geräte verbrauchen, wie viel Strom die Solaranlage produziert, was die Geräteziele sind und welche Farben während eines Tages durchgegangen werden, sind alles in den Property-Files definiert. Für jedes der drei Level gibt es ein Property-File ("levelX.properties"). 
+
+Diese Daten werden mit der Klasse "PropertiesModel.java" geholt und fürs Spiel initialisiert. Je nachdem welches Level aktuell ist, wird das entsprechende geholt. Die Gerätedaten oder Ziele können je Level unterschiedlich sein, bsp. ist es wichtiger im Winter Level, dass eine Heizung länger läuft als im Sommer Level.
+
+=== Punkteberechnung
+Die Punkte während eines Leveldurchlaufs, werden laufend berechnet. Dazu gibt es die entsprechende Methode, welche dies dazu rechnet:
+
+image::ScoreBerechnung.PNG["Score Berechnung"]
+
+Der Score wird berechnet aus dem produzierten Solarstrom. Da dieser laut unserer Logik dem insgesamten Solarstrom minus den produzierten Strom unserer Geräte entspricht, macht dies gerade die Differenz aus, welche Strom gespart oder überschossen wurde.
+
+Zudem wird darauf geachtet ob die Solarstrom Linie übertroffen wurde. Wenn ja, dann gibt es doppelt so viele Minuspunkte, wie sonst Pluspunkte. Das hängt damit zusammen, da es sonst keinen Unterschied macht bei den Gerätezielen, ob man diese am Anfang des Tages mit Minuspunkten erreicht oder am Mitte des Tages bei viel Solarstrom.
+
+=== Datenspeicherung
+
+Anders als bei der Datenbeschaffung, geht es hierbeit darum, wie ein Highscore gespeichert wird. Immer nachdem ein Spieler ein Spiel durchgespielt hat wird der Highscore ausgegeben und er kann einen Zufallsnamen auswählen aus einer Liste von mehreren gespeicherten Namen.
+
+image::PunktzahlDarstellung.PNG["Punktzahl Darstellung"]
+
+Nachdem dies bestätigt wurde, wird ein Eintrag im "userDataLevel1.properties" getätigt. Dort wird der Zeitpunkt, die Punktzahl und der ausgewählte Name gespeichert. 
+
+Nachdem Eintrag und bestätigen des Spielers wird er weitergeleitet zur Ansicht des Highscores. Hier sieht er seine Finallposition farblich hervorgehoben und kann die ganze Highscore Liste runterscrollen.
+
+image::HighscoreFinalDarstellung.PNG["Highscore Darstellung"]
+
+=== Zurücksetzen / Ändern von Daten
+
+Wenn man die Daten des Spiels zurücksetzen oder ändern möchte kann man folgendermassen umgehen.
+
+*Highscores zurücksetzen*
+
+Wenn es viele Highscores geben sollte und es wieder Platz benötigt, kann man die Highscore Dateien entleeren. Für die drei Level, gibt es jeweils ein Property-File. Die drei Property-Files heissen wie folgt:
+
+* userDataLevel1.properties
+* userDataLevel2.properties
+* userDataLevel3.properties
+
+Wichtig ist diese nur zu entleeren und nicht zu löschen, da es sonst zu Fehlern führen kann.
+
+*Datenpunkte ändern*
+
+Die Datenpunkte, wo die Solarstromproduktion durchgeht und wie viel Strom die anderen Geräte verbrauchen ist auch in Property-Files definiert. Auch hier gibt es wieder drei, für jedes Level eins. Dies ist nötig, weil es pro Level verschiedene Ziele geben soll. Die drei Property-Files heissen wie folgt:
+
+* level1.properties
+* level2.properties
+* level3.properties
+
+*Namen anpassen*
+
+Bevor man den Highscore bestätigt, kann man einen Random-Namen auswählen. Dafür gibt es die Datei "names.properties". Dort können die Namen geändert werden nach Bedarf.
+
+*Spieltexte anpassen*
+
+Auch für die Spieltexte gibt es ein Property-File, welches "gameTextDE.properties" heisst. Es gibt im gleichen Ordner auch ein Englisches, welches wir teils verwendet haben. Die entsprechende Textdatei, wird bei jeder View im Model festgelegt. Dort kann man auch den Pfad für andere Sprachen konfigurieren bzw. festlegen.

@@ -1,0 +1,100 @@
+= JUnit Testprotokoll
+
+== Einführung
+
+Dieses JUnit-Testprotokoll dokumentiert die Ergebnisse der Tests für das PreScoreModel.
+Ziel der Tests ist es, die korrekte Funktionalität des PreScoreModels zu überprüfen und sicherzustellen, dass die Endpunktzahl korrekt berechnet wird.
+Zudem wird getestet, ob ein zufälliger Name generiert werden kann.
+
+== Testumgebung
+
+Die JUnit-Tests wurden in folgender Umgebung durchgeführt:
+
+- MacBook Pro (Retina, 15-inch, Mid 2015), 2.2 GHz Quad-Core Intel Core i7
+- Raspbian OS (Raspberry Pi)
+
+== Testfälle und Ergebnisse
+
+=== Testfall 1: Endscore wird korrekt gesetzt (ohne Minuspunkte)
+
+[cols="2,3,3,3",options="header"]
+|===
+|Testfall-ID
+|Datum
+|Tester
+|Testergebnis
+
+|T01
+|21.05.2023
+|William Cruz
+|Erfolgreich
+
+|===
+
+Dieser Test überprüft, ob der Endscore korrekt gesetzt wird, ohne Minuspunkte.
+Das PreScoreModel wird initialisiert und der Endscore auf 2000 gesetzt.
+Das erwartete Ergebnis ist, dass der Endscore 2000 ist.
+
+=== Testfall 2: Endscore wird korrekt gesetzt (mit Minuspunkten)
+
+[cols="2,3,3,3",options="header"]
+|===
+|Testfall-ID
+|Datum
+|Tester
+|Testergebnis
+
+|T02
+|21.05.2023
+|William Cruz
+|Erfolgreich
+
+|===
+
+In diesem Testfall wird überprüft, ob der Endscore korrekt gesetzt wird, wenn Minuspunkte vorhanden sind.
+Das PreScoreModel wird initialisiert und die Anzahl der fehlenden Ziele auf 3 gesetzt.
+Der Endscore wird auf 2000 gesetzt.
+Das erwartete Ergebnis ist, dass der Endscore ohne Minuspunkte 2000 und der Endscore mit Minuspunkten 500 beträgt.
+
+=== Testfall 3: Zufälliger Name wird generiert
+
+[cols="2,3,3,3",options="header"]
+|===
+|Testfall-ID
+|Datum
+|Tester
+|Testergebnis
+
+|T03
+|21.05.2023
+|William Cruz
+|Erfolgreich
+
+|===
+
+Dieser Test überprüft, ob ein zufälliger Name korrekt generiert wird.
+Das PreScoreModel wird initialisiert und die Methode getRandomName() aufgerufen.
+Das erwartete Ergebnis ist, dass ein nicht leerer String zurückgegeben wird.
+
+== Testergebnisse
+
+Die JUnit-Tests für das PreScoreModel wurden erfolgreich durchgeführt und die erwarteten Ergebnisse wurden erreicht.
+Der Endscore wurde korrekt gesetzt und bei Bedarf wurden Minuspunkte berücksichtigt.
+Zudem konnte ein zufälliger Name erfolgreich generiert werden.
+
+== Bemerkungen
+
+Es wurden keine Probleme während der Tests festgestellt.
+
+Das JUnit-Testprotokoll für die Tests des PreScoreModel am 21.05.2023 wurde erfolgreich erstellt und enthält die Ergebnisse der durchgeführten Tests.
+Es dient als Referenz zur Überprüfung der Funktionalität des PreScoreModels und zur Qualitätssicherung des Codes.
+Etwaige Probleme oder Verbesserungsvorschläge können in den Bemerkungen festgehalten werden, um eine kontinuierliche Verbesserung zu ermöglichen. Das Testprotokoll soll regelmäßig überprüft und ausgewertet werden, um mögliche Fehler oder Schwachstellen zu identifizieren und entsprechende Maßnahmen zur Behebung einzuleiten.
+
+=== Testprotokoll Referenzen
+
+1. link:JUnit_Testprotokoll_LevelModel.adoc[JUnit-LevelModel 2023-05-21]
+2. link:JUnit_Testprotokoll_Time.adoc[JUnit-Time 2023-05-21]
+3. link:JUnit_Testprotokoll_DeviceLevelModel.adoc[JUnit-DeviceLevelModel 2023-05-21]
+4. link:JUnit_Testprotokoll_PreScoreModel.adoc[JUnit-PreScoreModel 2023-05-21]
+
+

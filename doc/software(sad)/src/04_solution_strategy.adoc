@@ -1,0 +1,48 @@
+[[section-solution-strategy]]
+== Lösungsstrategie
+
+=== Einstieg
+
+Die folgende Tabelle stellt die wichtigsten Qualitätsziele dar, mit jeweils passenden Architekturansätzen. Dies soll die Implementierung erleichtern.
+[cols="3,8" options="header"]
+|=============
+| Qualitätsziel | Dem zuträgliche Ansätze in der Architektur
+| Das Wetter soll während dem Spiel klar ersichtlich sein a| 
+* JavaFX als Darstellungsmittel
+* Implementierung von Icons entsprechend dem aktuellen bzw. kommendem Wetter
+* Unveränderliche Eigenschaften bei entsprechendem Wetter (z.B. bei Regen keine Stromproduktion möglich)
+| Der Spieler soll die Grundfunktionen bzw. die Steuerung des Spiels innerhalb von zwei Minuten verstanden haben a| 
+* Visuelle Spieltipps nach betätigen eines Buttons
+* Methode die das Betätigen des Buttons abfängt
+* Pi4J für die Verarbeitung der Raspberry Pi Inputs
+* Klare Beschriftung der Buttons auf dem Display, damit Steuerung klar ist
+| Der Graph, welcher die Stromproduktion und den Stromverbrauch darstellt soll als wichtiges Element dargestellt werden a| 
+* StackedAreaChart zur Darstellung (Teil von JavaFX)
+* Klasse die die Funktionen des Graphen verwaltet
+* Werte werden gespeichert bei gesamt Stromproduktion und Stromverbrauch
+|=============
+
+=== Der Aufbau von Solarsimulator
+
+Der Solarsimulator wird als JavaFX-Pogramm auf einem Raspberry Pi realisiert. Dabei zerfällt die Applikation in folgende Teile:
+
+* Eine Anbindung und Implementierung der Verbraucher und ihren Eigenschaften bezüglich Stromverbrauch
+* Eine Implementierung der produzierten Solarenergie anhand des Wetters
+* Eine Anbindung an physische Steuerungselemente
+* Eine Implementierung des Spielablaufes und der graphischen Oberfläche
+
+Alle diese Teile haben Schnittstellen zueinander und kommunizieren im Code miteinander durch verschiedene Klassen. Durch die Unterteilung in verschiedene Klassen lassen sich die Funktionen unbabhängig voneinander verändern und anpassen.
+
+Ein zentrales Element beim Entwurf ist die Darstellung eines Graphen. Er verbindet die beiden Teile Verbraucher und Solarenergie. Er stellt sowohl die Stromproduktion als auch den Stromverbrauch jedes einzelnen Verbrauchers an. Hierfür hilft JavaFX für die grafische Darstellung. Es ist wichtig, das der Graph gut aussieht, da er die Schüler*innen möglichst ansprechen soll.
+
+=== Anbindung
+
+Die Interaktion des Users mit dem Spiel erfolgt über mehrere Buttons und die sogenannten Verbraucher. Für die Kommunikation mit dem System dient die Java Library Pi4J. Diese Library dient explizit der Anbindung von Java mit dem Raspberry Pi.
+
+Die Buttons sind jeweils einer Funktion zugewiesen, welche je nach View sich ändern kann. Die jeweilige Zuweisung ist am Rand des GUIs zu sehen.
+
+Die Verbraucher sind gleich wie die Buttons klickbar, dass heisst man kann sie nach unten drücken, damit z.B. die Waschmaschine angeht. Verbraucher haben auch eine feste Laufzeit, bevor sie in einen Stand-by-Modus gehen. Im Stand-by-Modus ist der Stromverbrauch noch da, jedoch gering. Erst mit einem weiteren Klick können die Verbraucher wieder abgeschaltet werden.
+
+Die grafische Oberfläche selbst führt die Inputs aus, je nach Button oder Verbraucher, welcher betätigt wurde. 
+
+

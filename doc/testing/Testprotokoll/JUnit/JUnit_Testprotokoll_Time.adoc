@@ -1,0 +1,138 @@
+= JUnit Testdokumentation
+:toc: left
+:doctype: book
+:sectnums:
+:icons: font
+:source-highlighter: rouge
+:numbered:
+
+== Einführung
+
+Die folgende Dokumentation beschreibt die JUnit-Tests für die Time-Klasse im Solarstromsimulator.
+Ziel ist es, die Funktionalität der Methoden in der Time-Klasse zu überprüfen und sicherzustellen, dass sie korrekte Ergebnisse liefern.
+Die JUnit-Tests konzentrieren sich auf die automatisierte Überprüfung der Umrechnung von Millisekunden in Stunden und umgekehrt sowie auf das korrekte Setzen der Start- und Endzeiten.
+
+== Testumgebung
+
+Die JUnit-Tests wurden in folgender Umgebung durchgeführt:
+
+- Betriebssystem: Windows 10
+- Entwicklungsumgebung: IntelliJ IDEA Community Edition 2021.1
+- JDK-Version: 11
+
+== Testfallkategorien
+
+Die Testfälle sind in die folgenden Kategorien unterteilt:
+
+1. Umrechnung von Millisekunden in Stunden
+2. Umrechnung von Stunden in Millisekunden
+3. Setzen der Startzeit
+4. Setzen der Endzeit
+
+== Testfälle
+
+=== Umrechnung von Millisekunden in Stunden
+
+[cols="2,5,5",options="header"]
+|===
+|ID
+|Testfall
+|Beschreibung
+
+|T01
+|Millisekunden in Stunden umrechnen
+|Überprüft, ob die Methode `millsToHours` korrekt Millisekunden in Stunden umrechnet und das erwartete Ergebnis liefert.
+
+|===
+
+=== Umrechnung von Stunden in Millisekunden
+
+[cols="2,5,5",options="header"]
+|===
+|ID
+|Testfall
+|Beschreibung
+
+|T02
+|Stunden in Millisekunden umrechnen
+|Überprüft, ob die Methode `hoursToMills` korrekt Stunden in Millisekunden umrechnet und das erwartete Ergebnis liefert.
+
+|===
+
+=== Setzen der Startzeit
+
+[cols="2,5,5",options="header"]
+|===
+|ID
+|Testfall
+|Beschreibung
+
+|T03
+|Startzeit setzen
+|Überprüft, ob die Methode `setStart` die Startzeit korrekt setzt und die entsprechenden Getter-Methoden die erwarteten Werte liefern.
+
+|===
+
+=== Setzen der Endzeit
+
+[cols="2,5,5",options="header"]
+|===
+|ID
+|Testfall
+|Beschreibung
+
+|T04
+|Endzeit setzen
+|Überprüft, ob die Methode `setEnd` die Endzeit korrekt setzt und die entsprechenden Getter-Methoden die erwarteten Werte liefern.
+
+|===
+
+== Testprotokoll
+
+Das Testprotokoll soll die Ergebnisse der JUnit-Tests dokumentieren.
+Für jeden Testfall sollen die folgenden Informationen aufgezeichnet werden:
+
+1. Testfall-ID
+2. Datum der Durchführung
+3. Tester (Name oder Benutzername)
+4. Testergebnis (erfolgreich/nicht erfolgreich)
+5. Bemerkungen (z. B. aufgetretene Probleme oder Verbesserungsvorschläge)
+
+Die Testprotokolle sollen regelmäßig überprüft und ausgewertet werden, um die Qualität der Time-Klasse kontinuierlich zu verbessern. Dabei sollen insbesondere Probleme oder Schwachstellen identifiziert und entsprechende Maßnahmen zur Behebung eingeleitet werden.
+
+=== Testprotokoll
+
+==== Testfall T01: Millisekunden in Stunden umrechnen
+
+* Datum: 2023-05-21
+* Tester: William Cruz
+* Testergebnis: Erfolgreich
+* Bemerkungen: Die Methode `millsToHours` hat die Millisekunden korrekt in Stunden umgerechnet und das erwartete Ergebnis geliefert. Der Test war erfolgreich.
+
+==== Testfall T02: Stunden in Millisekunden umrechnen
+
+* Datum: 2023-05-21
+* Tester: William Cruz
+* Testergebnis: Erfolgreich
+* Bemerkungen: Die Methode `hoursToMills` hat die Stunden korrekt in Millisekunden umgerechnet und das erwartete Ergebnis geliefert. Der Test war erfolgreich.
+
+==== Testfall T03: Startzeit setzen
+
+* Datum: 2023-05-21
+* Tester: William Cruz
+* Testergebnis: Erfolgreich
+* Bemerkungen: Die Methode `setStart` hat die Startzeit korrekt gesetzt und die Getter-Methoden haben die erwarteten Werte geliefert. Der Test war erfolgreich.
+
+==== Testfall T04: Endzeit setzen
+
+* Datum: 2023-05-21
+* Tester: William Cruz
+* Testergebnis: Erfolgreich
+* Bemerkungen: Die Methode `setEnd` hat die Endzeit korrekt gesetzt und die Getter-Methoden haben die erwarteten Werte geliefert. Der Test war erfolgreich.
+
+=== Testprotokoll Referenzen
+
+1. link:JUnit_Testprotokoll_LevelModel.adoc[JUnit-LevelModel 2023-05-21]
+2. link:JUnit_Testprotokoll_Time.adoc[JUnit-Time 2023-05-21]
+3. link:JUnit_Testprotokoll_DeviceLevelModel.adoc[JUnit-DeviceLevelModel 2023-05-21]
+4. link:JUnit_Testprotokoll_PreScoreModel.adoc[JUnit-PreScoreModel 2023-05-21]

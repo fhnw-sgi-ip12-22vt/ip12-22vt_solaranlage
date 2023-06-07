@@ -1,0 +1,63 @@
+= Testprotokoll-Dokumentation
+:toc: left
+:doctype: book
+:sectnums:
+:icons: font
+:source-highlighter: rouge
+:numbered:
+
+== Titel und Beschreibung
+
+Testtitel: Stabilitätstest der Knöpfe Test
+
+Testbeschreibung:
+Dieses Testprotokoll dokumentiert den Stabilitätstest der Knöpfe, bei dem die Stabilität und Funktionalität der Knöpfe überprüft wird.
+Das Ziel dieses Tests ist es sicherzustellen, dass die Knöpfe stabil funktionieren und die Aktionen korrekt erkannt und ausgeführt werden.
+
+== Datum und Tester
+
+Datum: 2023-04-25
+
+Tester: William Cruz, Nick Koch
+
+== Testumgebung
+
+=== William Cruz
+
+* Hardware: MacBook Pro (Retina, 15-inch, Mid 2015)
+* Prozessor: 2.2 GHz Quad-Core Intel Core i7
+* Betriebssystem: Raspbian OS
+
+=== Nick Koch
+
+* Hardware: -
+* Betriebssystem: Raspbian OS
+
+== Testfälle
+
+[cols="1,2,2,2,1,1",options="header"]
+|===
+|Test-ID | Testbeschreibung | Erwartetes Ergebnis | Tatsächliches Ergebnis | Tester | Status
+|T01 | Simulator starten | Der Simulator startet erfolgreich | Der Simulator startet erfolgreich | William Cruz, Nick Koch | Bestanden
+|T02 | Simulator stoppen | Der Simulator stoppt erfolgreich | Der Simulator stoppt erfolgreich | William Cruz, Nick Koch | Bestanden
+|T03 | Robustheit - Installiert | Der Simulator hält leichten Stößen stand | Der Simulator hält leichten Stößen stand | William Cruz, Nick Koch | Bestanden
+|T13 | Verbraucher automatisch einschalten | - | - | - | -
+|T14 | Autonome Verbraucher | - | - | - | -
+|T21 | Taskliste | - | - | - | -
+|T22 | Taskerfüllung | - | - | - | -
+|T41 | Erkennung von Buttons | Button-Aktionen werden korrekt erkannt und ausgeführt | Button-Aktionen werden korrekt erkannt und ausgeführt | William Cruz, Nick Koch | Bestanden
+|===
+
+== Fehlerberichte
+
+Keine Fehler wurden während der Tests gefunden.
+
+== Anhänge
+
+Keine Anhänge erforderlich.
+
+== Abschließende Bemerkungen
+
+Alle durchgeführten Tests waren erfolgreich und es wurden keine Fehler gefunden.
+Der Simulator erfüllt die Anforderungen und ist bereit, in Produktion zu gehen.
+Es wird empfohlen, regelmäßig Tests durchzuführen, um die Qualität und Funktionalität des Simulators zu gewährleisten und mögliche Probleme frühzeitig zu identifizieren.
