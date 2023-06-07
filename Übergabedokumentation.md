@@ -2,6 +2,8 @@
 
 Jugendliche aufgepasst! Erlebt die Kraft der Sonne mit dem interaktiven "Solarstromsimulator"! Entdeckt, wie ihr den Stromverbrauch von Elektrogeräten optimiert und eure eigene Photovoltaikanlage effizient nutzt. Taucht ein in die faszinierende Welt der erneuerbaren Energien und gestaltet die Zukunft der Energieversorgung!
 
+![image](https://github.com/fhnw-sgi-ip12-22vt/ip12-22vt_solaranlage/assets/135813138/6f8db50a-b8fb-40bd-9fad-eec277c88d07)
+
 ## Team Solar Impact:
 
 William Cruz (WC): william.cruz@students.fhnw.ch
