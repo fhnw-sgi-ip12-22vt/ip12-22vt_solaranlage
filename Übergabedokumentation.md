@@ -76,7 +76,7 @@ Stellen Sie sicher, dass Sie diese Schritte regelmäßig wiederholen, um Ihre So
 Stand zu halten.
 
 ## Hardware
-Die genaue Beschreibung der Hardware finden Sie hier: 
+Die genaue Beschreibung der Hardware finden Sie hier: https://github.com/fhnw-sgi-ip12-22vt/ip12-22vt_solaranlage/commit/0a60d7acee878281cf82f9e8439cd0664dcb97ae
 
 ## Rahmenbedingungen:
 
